@@ -1,24 +1,20 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import "./style.css";
+import encontrolLogo from "../public/encontrol_logo.jpg";
+import { setupCounter } from "./counter.ts";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
+    <a href="https://www.instagram.com/encontrol.mty/" target="_blank">
+      <img src="${encontrolLogo}" class="logo" alt="EnControl logo" />
     </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
+    <h1>EnControl</h1>
+    <h2>Próximamente...</h2>
     <div class="card">
-      <button id="counter" type="button"></button>
     </div>
     <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
+      Este sitio es un WIP (Work in Progress), mantente al pendiente de nuestras redes sociales y Discord para más información.
     </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
