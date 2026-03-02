@@ -1,0 +1,103 @@
+.intro {
+  padding: 4rem 0;
+  border-bottom: 2px solid var(--blue-accent);
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sorting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+.sorting button {
+  background-color: transparent;
+  border: 2px solid var(--blue-accent);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+
+.sorting button:hover {
+  background-color: var(--blue-mid);
+}
+
+.sorting button.active {
+  background-color: var(--blue-accent);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 35vh;
+  border-bottom: 2px solid var(--blue-accent);
+  padding: 4rem 0;
+}
+.card.reverse {
+  direction: rtl;
+}
+
+.card.reverse .info {
+  direction: ltr;
+}
+
+.imageWrap {
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  direction: ltr;
+}
+
+.info h3 {
+  font-size: 2rem;
+}
+
+.meta {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+}
+
+.meta a {
+  color: var(--blue-accent);
+}
+
+.meta a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.meta span {
+  color: var(--text-muted);
+}
+
+.info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 55ch;
+}

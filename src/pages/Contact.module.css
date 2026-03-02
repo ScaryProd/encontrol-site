@@ -1,0 +1,37 @@
+.intro {
+  padding: 4rem 0;
+  border-bottom: 2px solid var(--blue-accent);
+  margin-bottom: 4rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  color: var(--blue-accent);
+  border-bottom: 1px solid var(--blue-mid);
+  padding-bottom: 0.5rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links a {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--white);
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--blue-accent);
+  text-decoration: none;
+}

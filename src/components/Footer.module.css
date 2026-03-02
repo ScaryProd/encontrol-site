@@ -1,0 +1,34 @@
+.footer {
+  border-top: 4px solid var(--blue-accent);
+  background-color: var(--blue-dark);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 2rem;
+}
+
+.social a {
+  font-family: var(--font-pixel);
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 2.5rem;
+  display: flex;
+}
+
+.social a:hover {
+  color: var(--blue-accent);
+}
+
+.copyright {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--text-muted);
+  text-align: center;
+}
