@@ -10,7 +10,10 @@ function Home() {
           className={styles.logo}
         />
         <h1>Bienvenido a EnControl</h1>
-        <p>Una comunidad abierta de desarrollo de videojuegos.</p>
+        <p>
+          La comunidad abierta de desarrollo de videojuegos mas grande de
+          Monterrey.
+        </p>
         <p>
           Este sitio es un WIP (Work in Progress), mantente al pendiente de
           nuestras redes sociales y Discord para más información.
