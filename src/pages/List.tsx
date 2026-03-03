@@ -62,6 +62,16 @@ function TeamIcons({ links }: { links: TeamLinks }) {
           <FaGlobe />
         </a>
       )}
+      {links.discord && (
+        <a
+          href="https://discord.com/invite/Cad9RaE4s6"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Discord"
+        >
+          <FaDiscord />
+        </a>
+      )}
       {links.instagram && (
         <a
           href={links.instagram}

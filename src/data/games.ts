@@ -10,6 +10,7 @@ export type TeamLinks = {
   bluesky?: string;
   twitter?: string;
   website?: string;
+  discord?: string;
 };
 
 export type StoreLinks = {
