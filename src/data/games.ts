@@ -1,4 +1,4 @@
-import type { TeamLinks, ReleaseDate, StoreLinks, Developer, Game } from "./common";
+import type { Developer, Game } from "./common";
 
 
 export const developers = [
