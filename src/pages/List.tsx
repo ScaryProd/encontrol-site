@@ -1,10 +1,5 @@
 import { useState, useMemo } from "react";
-import {
-  games,
-  type ReleaseDate,
-  type TeamLinks,
-  type StoreLinks,
-} from "../data/games";
+import { games, type ReleaseDate, type StoreLinks } from "../data/games";
 import styles from "./List.module.css";
 import {
   FaInstagram,
@@ -18,6 +13,7 @@ import {
 import { FaBluesky, FaXTwitter } from "react-icons/fa6";
 import { SiGogdotcom, SiItchdotio, SiNintendoswitch } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { type TeamLinks } from "../data/common";
 
 function formatRelease(release: ReleaseDate): string {
   switch (release.type) {
@@ -198,6 +194,10 @@ function List() {
       <section className={styles.intro}>
         <h1>Juegos de la Comunidad</h1>
         <p>Una colección de juegos creados por miembros de EnControl.</p>
+        <p>
+          Para agregar tu proyecto, ponte en contacto con un miembro
+          organizador.
+        </p>
         <div className={styles.sorting}>
           <span>Ordenar por:</span>
           <button

@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { games, type TeamLinks, type StoreLinks } from "../data/games";
+import { games, type StoreLinks } from "../data/games";
+import { type TeamLinks } from "../data/common";
 import styles from "./GamePage.module.css";
 import {
   FaInstagram,

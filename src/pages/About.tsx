@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { members } from "../data/team";
 import styles from "./About.module.css";
 
@@ -13,10 +14,13 @@ function About() {
         <h2>El Equipo</h2>
         <div className={styles.grid}>
           {members.map((member) => (
-            <div key={member.id} className={styles.card}>
-              <h3>{member.name}</h3>
-              <p>{member.user}</p>
-            </div>
+            <Link to={`/about/${member.user}`} className={styles.back}>
+              <div key={member.id} className={styles.card}>
+                <h3>{member.name}</h3>
+                <p>{member.user}</p>
+                <img src={member.image} alt={member.name} />
+              </div>
+            </Link>
           ))}
         </div>
       </section>

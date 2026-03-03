@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        <img src="/encontrol_logo.jpg" alt="EnControl" />
+        <img src="/encontrol_logo_animated.gif" alt="EnControl" />
       </Link>
 
       <button className={styles.hamburger} onClick={() => setOpen(!open)}>

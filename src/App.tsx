@@ -7,6 +7,7 @@ import List from "./pages/List";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 import GamePage from "./pages/GamePage";
+import AboutMember from "./pages/AboutMember";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about/:user" element={<AboutMember />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/games" element={<List />} />
         <Route path="/events" element={<Events />} />

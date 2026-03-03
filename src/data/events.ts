@@ -61,4 +61,19 @@ export const events: Event[] = [
     status: "past",
     recap: "juntada en un cafe de chill.",
   },
+  {
+    id: 3,
+    title: "EnControl en Ladweek",
+    description:
+      "Espacio para compartir trabajo, recibir retroalimentación y hacer networking.",
+    date: "2026-03-14",
+    location: {
+      type: "inperson",
+      venue: "Campus Tec, Expo Estudios.",
+      city: "Monterrey, NL",
+    },
+    status: "upcoming",
+    registerUrl:
+      "https://www.eventbrite.com.mx/e/ladweek-2026-tickets-1781911287629",
+  },
 ];

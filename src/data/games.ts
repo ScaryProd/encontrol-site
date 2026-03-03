@@ -1,17 +1,10 @@
+import { type TeamLinks } from "./common";
+
 export type ReleaseDate =
   | { type: "date"; value: string }
   | { type: "year"; value: number }
   | { type: "quarter"; value: string }
   | { type: "tbd" };
-
-export type TeamLinks = {
-  instagram?: string;
-  facebook?: string;
-  bluesky?: string;
-  twitter?: string;
-  website?: string;
-  discord?: string;
-};
 
 export type StoreLinks = {
   steam?: string;
