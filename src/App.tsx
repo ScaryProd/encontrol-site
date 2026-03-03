@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import List from "./pages/List";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
+import GamePage from "./pages/GamePage";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/list" element={<List />} />
+        <Route path="/games" element={<List />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/games/:slug" element={<GamePage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

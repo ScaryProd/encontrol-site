@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   gap: 1.5rem;
-  padding: 4rem 0;
+  padding: 1.5rem 0 4rem 0;
   border-bottom: 2px solid var(--blue-accent);
   margin-bottom: 4rem;
 }
@@ -34,4 +34,20 @@
   color: var(--blue-accent);
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--blue-mid);
+}
+
+.cta {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  background-color: var(--blue-accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.cta:hover {
+  background-color: var(--blue-mid);
+  text-decoration: none;
 }

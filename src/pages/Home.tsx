@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 
 function Home() {
@@ -18,7 +19,9 @@ function Home() {
           Este sitio es un WIP (Work in Progress), mantente al pendiente de
           nuestras redes sociales y Discord para más información.
         </p>
-        <button>Únete</button>
+        <Link to="https://discord.com/invite/Cad9RaE4s6" className={styles.cta}>
+          Únete
+        </Link>
       </section>
 
       <section className={styles.section}>
