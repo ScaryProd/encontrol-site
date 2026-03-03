@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { games, type ReleaseDate, type StoreLinks } from "../data/games";
+import { games } from "../data/games";
+import { type ReleaseDate, type StoreLinks } from "../data/common";
 import styles from "./List.module.css";
 import {
   FaInstagram,
@@ -60,7 +61,7 @@ function TeamIcons({ links }: { links: TeamLinks }) {
       )}
       {links.discord && (
         <a
-          href="https://discord.com/invite/Cad9RaE4s6"
+          href={links.website}
           target="_blank"
           rel="noreferrer"
           aria-label="Discord"
@@ -239,17 +240,21 @@ function List() {
                 <h3>{game.title}</h3>
               </Link>
               <div className={styles.meta}>
-                {game.team.logoUrl && (
-                  <img
-                    src={game.team.logoUrl}
-                    alt={game.team.name}
-                    className={styles.teamLogo}
-                  />
-                )}
-                <span className={styles.teamName}>{game.team.name}</span>
+                {game.developers.slice(0, 5).map((dev) => (
+                  <div key={dev.name} className={styles.devEntry}>
+                    {dev.logoUrl && (
+                      <img
+                        src={dev.logoUrl}
+                        alt={dev.name}
+                        className={styles.teamLogo}
+                      />
+                    )}
+                    <span className={styles.teamName}>{dev.name}</span>
+                  </div>
+                ))}
                 <span>{formatRelease(game.release)}</span>
               </div>
-              <TeamIcons links={game.team.links} />
+              <TeamIcons links={game.developers[0].links} />
               <p>{game.description}</p>
               <StoreIcons store={game.store} />
             </div>

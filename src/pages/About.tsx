@@ -14,8 +14,12 @@ function About() {
         <h2>El Equipo</h2>
         <div className={styles.grid}>
           {members.map((member) => (
-            <Link to={`/about/${member.user}`} className={styles.back}>
-              <div key={member.id} className={styles.card}>
+            <Link
+              key={member.id}
+              to={`/about/${member.user}`}
+              className={styles.back}
+            >
+              <div className={styles.card}>
                 <h3>{member.name}</h3>
                 <p>{member.user}</p>
                 <img src={member.image} alt={member.name} />

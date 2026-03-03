@@ -1,6 +1,10 @@
 import { useParams, Link } from "react-router-dom";
-import { games, type StoreLinks } from "../data/games";
-import { type TeamLinks } from "../data/common";
+import { games } from "../data/games";
+import {
+  type TeamLinks,
+  type ReleaseDate,
+  type StoreLinks,
+} from "../data/common";
 import styles from "./GamePage.module.css";
 import {
   FaInstagram,
@@ -13,7 +17,6 @@ import {
 } from "react-icons/fa";
 import { FaBluesky, FaXTwitter } from "react-icons/fa6";
 import { SiGogdotcom, SiItchdotio, SiNintendoswitch } from "react-icons/si";
-import type { ReleaseDate } from "../data/games";
 
 function formatRelease(release: ReleaseDate): string {
   switch (release.type) {
@@ -142,6 +145,16 @@ function StoreIcons({ store }: { store: StoreLinks }) {
           <SiNintendoswitch />
         </a>
       )}
+      {store.website && (
+        <a
+          href={store.website}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Sitio web"
+        >
+          <FaGlobe />
+        </a>
+      )}
     </div>
   );
 }
@@ -161,6 +174,14 @@ function GamePage() {
     );
   }
 
+  const relatedGames = games.filter(
+    (g) =>
+      g.slug !== game.slug &&
+      g.developers.some((dev) =>
+        game.developers.some((d) => d.name === dev.name),
+      ),
+  );
+
   return (
     <div className={styles.container}>
       <Link to="/games" className={styles.back}>
@@ -175,18 +196,22 @@ function GamePage() {
           <p>{game.description}</p>
 
           <div className={styles.section}>
-            <h3>Equipo</h3>
-            <div className={styles.teamRow}>
-              {game.team.logoUrl && (
-                <img
-                  src={game.team.logoUrl}
-                  alt={game.team.name}
-                  className={styles.teamLogo}
-                />
-              )}
-              <span className={styles.teamName}>{game.team.name}</span>
-            </div>
-            <TeamIcons links={game.team.links} />
+            <h3>
+              {game.developers.length > 1 ? "Desarrolladores" : "Desarrollador"}
+            </h3>
+            {game.developers.map((dev) => (
+              <div key={dev.name} className={styles.devRow}>
+                {dev.logoUrl && (
+                  <img
+                    src={dev.logoUrl}
+                    alt={dev.name}
+                    className={styles.teamLogo}
+                  />
+                )}
+                <span className={styles.teamName}>{dev.name}</span>
+                <TeamIcons links={dev.links} />
+              </div>
+            ))}
           </div>
 
           <div className={styles.section}>
@@ -195,6 +220,28 @@ function GamePage() {
           </div>
         </div>
       </div>
+
+      {relatedGames.length > 0 && (
+        <div className={styles.related}>
+          <h2>Más juegos de este desarrollador</h2>
+          <div className={styles.relatedGrid}>
+            {relatedGames.map((related) => (
+              <Link
+                key={related.id}
+                to={`/games/${related.slug}`}
+                className={styles.relatedCard}
+              >
+                <img
+                  src={related.imageUrl}
+                  alt={related.title}
+                  className={styles.relatedImage}
+                />
+                <span>{related.title}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
