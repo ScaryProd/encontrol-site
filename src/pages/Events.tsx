@@ -22,7 +22,6 @@ function formatLocation(location: EventLocation): string {
   }
 }
 
-const upcoming = events.filter((e) => e.status === "upcoming");
 const past = events.filter((e) => e.status === "past");
 
 function Events() {
