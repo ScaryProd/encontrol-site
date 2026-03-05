@@ -1,0 +1,115 @@
+import { useParams, Link } from "react-router-dom";
+import { games } from "../../data/games";
+import { type ReleaseDate } from "../../data/common";
+import styles from "./GamePage.module.css";
+import { FaArrowLeft } from "react-icons/fa";
+import SocialIcons from "../../components/SocialIcons";
+import StoreIcons from "../../components/StoreIcons";
+
+function formatRelease(release: ReleaseDate): string {
+  switch (release.type) {
+    case "date":
+      return new Date(release.value).toLocaleDateString("es-MX", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+    case "year":
+      return `${release.value}`;
+    case "quarter":
+      return release.value;
+    case "tbd":
+      return "Próximamente";
+  }
+}
+
+function GamePage() {
+  const { slug } = useParams();
+  const game = games.find((g) => g.slug === slug);
+
+  if (!game) {
+    return (
+      <div className={styles.notFound}>
+        <h1>Juego no encontrado</h1>
+        <Link to="/games" className={styles.back}>
+          <FaArrowLeft /> Volver a la lista
+        </Link>
+      </div>
+    );
+  }
+
+  const relatedGames = games.filter(
+    (g) =>
+      g.slug !== game.slug &&
+      g.developers.some((dev) =>
+        game.developers.some((d) => d.name === dev.name),
+      ),
+  );
+
+  return (
+    <div className={styles.container}>
+      <Link to="/games" className={styles.back}>
+        <FaArrowLeft /> Volver a la lista
+      </Link>
+
+      <div className={styles.hero}>
+        <img src={game.imageUrl} alt={game.title} className={styles.image} />
+        <div className={styles.heroInfo}>
+          <h1>{game.title}</h1>
+          <p className={styles.release}>{formatRelease(game.release)}</p>
+          <p>{game.description}</p>
+
+          <div className={styles.section}>
+            <h3>
+              {game.developers.length > 1 ? "Desarrolladores" : "Desarrollador"}
+            </h3>
+            {game.developers.map((dev) => (
+              <div key={dev.name} className={styles.devRow}>
+                <Link to={`/developers/${dev.slug}`} className={styles.devLink}>
+                  {dev.logoUrl && (
+                    <img
+                      src={dev.logoUrl}
+                      alt={dev.name}
+                      className={styles.teamLogo}
+                    />
+                  )}
+                  {dev.name}
+                </Link>
+                <SocialIcons links={dev.links} />
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.section}>
+            <h3>Disponible en</h3>
+            <StoreIcons store={game.store} />
+          </div>
+        </div>
+      </div>
+
+      {relatedGames.length > 0 && (
+        <div className={styles.related}>
+          <h2>Más juegos de este desarrollador</h2>
+          <div className={styles.relatedGrid}>
+            {relatedGames.map((related) => (
+              <Link
+                key={related.id}
+                to={`/games/${related.slug}`}
+                className={styles.relatedCard}
+              >
+                <img
+                  src={related.imageUrl}
+                  alt={related.title}
+                  className={styles.relatedImage}
+                />
+                <span>{related.title}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default GamePage;

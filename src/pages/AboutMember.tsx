@@ -1,93 +1,8 @@
 import { useParams, Link } from "react-router-dom";
-import { type TeamLinks } from "../data/common";
-import styles from "./GamePage.module.css";
-import {
-  FaInstagram,
-  FaFacebook,
-  FaSteam,
-  FaGlobe,
-  FaArrowLeft,
-} from "react-icons/fa";
-import { FaBluesky, FaXTwitter } from "react-icons/fa6";
-import { SiItchdotio } from "react-icons/si";
+import styles from "./games/GamePage.module.css";
+import { FaArrowLeft } from "react-icons/fa";
 import { members } from "../data/team";
-
-function TeamIcons({ links }: { links: TeamLinks }) {
-  return (
-    <div className={styles.icons}>
-      {links.website && (
-        <a
-          href={links.website}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Sitio web"
-        >
-          <FaGlobe />
-        </a>
-      )}
-      {links.instagram && (
-        <a
-          href={links.instagram}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
-      )}
-      {links.facebook && (
-        <a
-          href={links.facebook}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Facebook"
-        >
-          <FaFacebook />
-        </a>
-      )}
-      {links.twitter && (
-        <a
-          href={links.twitter}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Twitter"
-        >
-          <FaXTwitter />
-        </a>
-      )}
-      {links.bluesky && (
-        <a
-          href={links.bluesky}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Bluesky"
-        >
-          <FaBluesky />
-        </a>
-      )}
-      {links.itch && (
-        <a
-          href={links.itch}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Itch.io"
-        >
-          <SiItchdotio />
-        </a>
-      )}
-      {links.steam && (
-        <a
-          href={links.steam}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Steam"
-        >
-          <FaSteam />
-        </a>
-      )}
-    </div>
-  );
-}
+import SocialIcons from "../components/SocialIcons";
 
 function AboutMember() {
   const { user } = useParams();
@@ -118,7 +33,7 @@ function AboutMember() {
 
           <div className={styles.section}>
             <h3>Links:</h3>
-            {member.links && <TeamIcons links={member.links} />}
+            {member.links && <SocialIcons links={member.links} />}
           </div>
         </div>
       </div>

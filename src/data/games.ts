@@ -1,17 +1,16 @@
 import type { Developer, Game } from "./common";
 
-
-export const developers = [
+export const developers: Developer[] = [
   {
-    id: 1,
+    slug: "Playstorm",
     name: "Playstorm Studios",
     logoUrl: undefined,
     links: {
       website: "https://encontrol.dev",
-    }
+    },
   },
   {
-    id: 2,
+    slug: "PrettyScar",
     name: "Pretty Scar",
     logoUrl:
       "https://pbs.twimg.com/profile_images/1902760092984070144/q8AxPHop_400x400.jpg",
@@ -20,7 +19,7 @@ export const developers = [
     },
   },
   {
-    id: 3,
+    slug: "DonAttico",
     name: "Don Attico",
     logoUrl:
       "https://cdn.bsky.app/img/avatar/plain/did:plc:sdpi3a4hw672aq26weu3qdud/bafkreieplw27vqutl7arbh4xa2djojetwv6y5itpnitw3lwljnl4o26oia@jpeg",
@@ -29,56 +28,60 @@ export const developers = [
     },
   },
   {
-    id: 4,
+    slug: "FunkyCanCreative",
     name: "Funky Can Creative",
     logoUrl:
       "https://avatars.fastly.steamstatic.com/a5226947eb4f619efb9f9b7b1823587473bbbec4_full.jpg",
     links: {
       bluesky: "https://bsky.app/profile/whodunnitvn.bsky.social",
       twitter: "https://x.com/FunkyCanDev",
-      instagram: "https://www.instagram.com/funkycancreative/"
+      instagram: "https://www.instagram.com/funkycancreative/",
     },
   },
   {
-    id: 5,
+    slug: "Headless",
     name: "Headless",
     logoUrl:
       "https://avatars.fastly.steamstatic.com/baf43430b4ea204c1068f2c9c5bb1f3346c0660b_full.jpg",
     links: {
       twitter: "https://x.com/Headless_Games",
-      website: "https://www.headlessvideogames.com/"
-
+      website: "https://www.headlessvideogames.com/",
     },
   },
   {
-    id: 6,
+    slug: "PPStudio",
     name: "Pixel Perfect Studios",
     logoUrl:
       "https://i0.wp.com/www.imcsw.com/wp-content/uploads/2019/05/cropped-PPStudio-Logo-Round.png",
     links: {
-      website: "https://www.pixelperfectstudio.mx/"
-
+      website: "https://www.pixelperfectstudio.mx/",
     },
   },
   {
-    id: 7,
+    slug: "Calix",
     name: "CalixJumio",
     logoUrl:
       "https://cdn.bsky.app/img/avatar/plain/did:plc:lwugoxbxtqp7kaimrjwx2nxz/bafkreifrgr33upv6p2yamapmp5txiweiwo3zblj3xj5palak3iuidf5gq4@jpeg",
     links: {
       website: "https://calixjumio.wordpress.com/",
-      bluesky: "https://bsky.app/profile/calixjumio.me"
-
+      bluesky: "https://bsky.app/profile/calixjumio.me",
     },
   },
-
-
-]
+  {
+    slug: "Ignita",
+    name: "Ignita Games",
+    logoUrl:
+      "https://avatars.fastly.steamstatic.com/8eda51bf7a158755e5f9b0d81c08c82b790872db_full.jpg",
+    links: {
+      bluesky: "https://bsky.app/profile/marcoelz.bsky.social",
+    },
+  },
+];
 
 export function getDev(name: string): Developer {
-  const dev = developers.find((d) => d.name === name)
-  if (!dev) throw new Error(`Developer "${name}" not found`)
-  return dev
+  const dev = developers.find((d) => d.name === name);
+  if (!dev) throw new Error(`Developer "${name}" not found`);
+  return dev;
 }
 
 export const games: Game[] = [
@@ -86,12 +89,11 @@ export const games: Game[] = [
     id: 1,
     slug: "Eagle-knight-paradox",
     title: "Eagle Knight Paradox",
-    description: "Platformer chidongo",
+    description:
+      "Eagle Knight Paradox fuses fast-paced mecha action with slice-of-life storytelling. As Ian, defend the futuristic city of Comala 88 while building relationships that shape the world around you. Every choice matters—protect duty, or follow your heart. ",
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3008700/library_600x900_2x.jpg?t=1765331087",
-    developers:
-      [getDev("Playstorm Studios")]
-    ,
+    developers: [getDev("Playstorm Studios")],
     store: {
       steam: "https://store.steampowered.com/app/3008700",
     },
@@ -101,12 +103,11 @@ export const games: Game[] = [
     id: 2,
     slug: "Uppercute",
     title: "Uppercute",
-    description: "Speedrun platformer",
+    description:
+      "Uppercute is a 3D action platformer where, with the help of your sister and the use of your runner skills, you’ll dive into people's minds, face challenging opponents and retrieve valuable information to solve the mystery of your brother's disappearance. ",
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3151660/16ed08a363857124e7aa8e99b64e6e8ce931b9c1/library_600x900_2x.jpg?t=1749495379",
-    developers:
-      [getDev("Pretty Scar")]
-    ,
+    developers: [getDev("Pretty Scar")],
     store: {
       steam: "https://store.steampowered.com/app/3151660",
     },
@@ -138,7 +139,7 @@ export const games: Game[] = [
     developers: [getDev("Funky Can Creative")],
     store: {
       steam: "https://store.steampowered.com/app/1928320/PopSlinger",
-      switch: "https://www.nintendo.com/us/store/products/popslinger-switch/"
+      switch: "https://www.nintendo.com/us/store/products/popslinger-switch/",
     },
     release: { type: "date", value: "2022-04-14" },
   },
@@ -152,8 +153,10 @@ export const games: Game[] = [
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3195370/library_600x900_2x.jpg?t=1748658816",
     developers: [getDev("Funky Can Creative")],
     store: {
-      steam: "https://store.steampowered.com/app/3195370/PopSlinger_Vol_2__Loveless",
-      switch: "https://www.nintendo.com/us/store/products/popslinger-vol-2-loveless-switch/"
+      steam:
+        "https://store.steampowered.com/app/3195370/PopSlinger_Vol_2__Loveless",
+      switch:
+        "https://www.nintendo.com/us/store/products/popslinger-vol-2-loveless-switch/",
     },
     release: { type: "date", value: "2024-10-09" },
   },
@@ -181,7 +184,8 @@ export const games: Game[] = [
       "https://i0.wp.com/www.imcsw.com/wp-content/uploads/2025/10/OmNomTitle-ezgif.com-video-to-gif-converter-1.gif?w=3840&amp;ssl=1",
     developers: [getDev("Pixel Perfect Studios")],
     store: {
-      website: "https://games.legendsoflearning.com/game/cut-the-rope-om-nom-s-picture-collection/4581?learning_objective_id=985&partner=legends-developer"
+      website:
+        "https://games.legendsoflearning.com/game/cut-the-rope-om-nom-s-picture-collection/4581?learning_objective_id=985&partner=legends-developer",
     },
     release: { type: "date", value: "2026-02-06" },
   },
@@ -195,8 +199,22 @@ export const games: Game[] = [
       "https://shared.steamstatic.com/store_item_assets/steam/apps/2976620/library_600x900_2x.jpg?t=1715316243",
     developers: [getDev("CalixJumio")],
     store: {
-      steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/"
+      steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/",
     },
     release: { type: "tbd" },
+  },
+  {
+    id: 8,
+    slug: "IdleWaters",
+    title: "Idle Waters",
+    description:
+      "A relaxing idle fishing game that waits for you at the bottom of your screen. CATCH fish, BUY upgrades, COMPLETE your collection, and DISPLAY them in your aquarium.",
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/2963540/library_600x900_2x.jpg?t=1754971349",
+    developers: [getDev("Ignita Games")],
+    store: {
+      steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/",
+    },
+    release: { type: "date", value: "2025-12-10" },
   },
 ];

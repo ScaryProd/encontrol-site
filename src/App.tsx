@@ -3,11 +3,13 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import List from "./pages/List";
+import List from "./pages/games/List";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
-import GamePage from "./pages/GamePage";
+import GamePage from "./pages/games/GamePage";
 import AboutMember from "./pages/AboutMember";
+import Developers from "./pages/developers/Developers";
+import DeveloperPage from "./pages/developers/DeveloperPage";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/games" element={<List />} />
         <Route path="/events" element={<Events />} />
         <Route path="/games/:slug" element={<GamePage />} />
+        <Route path="/developers" element={<Developers />} />
+        <Route path="/developers/:slug" element={<DeveloperPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

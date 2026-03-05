@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--blue-accent);
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.logoPlaceholder {
+  width: 200px;
+  height: 200px;
+  background-color: var(--blue-mid);
+  border: 2px solid var(--blue-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-pixel);
+  font-size: 4rem;
+  color: var(--blue-accent);
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroInfo h1 {
+  font-size: 2.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 55ch;
+}
+
+.games {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.games h2 {
+  color: var(--blue-accent);
+  border-bottom: 1px solid var(--blue-mid);
+  padding-bottom: 0.5rem;
+}
+
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+}
+
+.gameCard:hover {
+  color: var(--blue-accent);
+  text-decoration: none;
+}
+
+.gameImage {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 2px solid var(--blue-mid);
+  transition: border-color 0.2s;
+}
+
+.gameCard:hover .gameImage {
+  border-color: var(--blue-accent);
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

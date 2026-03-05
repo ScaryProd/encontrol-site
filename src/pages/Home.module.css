@@ -27,13 +27,13 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 4rem;
 }
 
 .section h2 {
   color: var(--blue-accent);
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--blue-mid);
+  margin-top: 2rem;
 }
 
 .cta {

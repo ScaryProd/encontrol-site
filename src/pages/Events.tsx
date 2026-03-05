@@ -1,3 +1,4 @@
+import UpcomingEvents from "../components/UpcomingEvents";
 import { events, type EventLocation } from "../data/events";
 import styles from "./Events.module.css";
 
@@ -30,42 +31,22 @@ function Events() {
       <section className={styles.intro}>
         <h1>Eventos</h1>
         <p>Juntadas, meetups y más de la comunidad EnControl.</p>
+
+        <h1>Por que asistir a eventos?</h1>
+        <p>
+          Puedes ganar exposición para ti, tu projecto/juego/portafolio. Haces
+          networking. Encuentras recursos, herramientas, ayuda, feedback e
+          insipración constante para tu proyecto. Conoces a tu comunidad, haces
+          amistades y entablas diálogo con gente similar, entras a un espacio
+          seguro con personas de tu círculo, y conoces a todo tipo gente.
+          Crecimiento propio e iniciativa. Es completamente gratuito. EnControl
+          se empeña en ofrecer una experiencia completamente gratuita y
+          herramientas abiertas para una experiencia lo más amigable y accesible
+          posible.
+        </p>
       </section>
 
-      {upcoming.length > 0 && (
-        <section className={styles.upcoming}>
-          <h2>Próximos Eventos</h2>
-          <div className={styles.upcomingGrid}>
-            {upcoming.map((event) => (
-              <div key={event.id} className={styles.upcomingCard}>
-                {event.imageUrl && (
-                  <img
-                    src={event.imageUrl}
-                    alt={event.title}
-                    className={styles.upcomingImage}
-                  />
-                )}
-                <span className={styles.date}>{formatDate(event.date)}</span>
-                <h3>{event.title}</h3>
-                <span className={styles.location}>
-                  {formatLocation(event.location)}
-                </span>
-                <p>{event.description}</p>
-                {event.status === "upcoming" && (
-                  <a
-                    href={event.registerUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.register}
-                  >
-                    Regístrate
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      <UpcomingEvents />
 
       <section className={styles.pastSection}>
         <h2>Eventos Pasados</h2>
@@ -75,23 +56,23 @@ function Events() {
               key={event.id}
               className={`${styles.card} ${index % 2 !== 0 ? styles.reverse : ""}`}
             >
-              <div className={styles.cardLeft}>
-                {event.imageUrl && (
+              {event.imageUrl && (
+                <div className={styles.imageWrap}>
                   <img
                     src={event.imageUrl}
                     alt={event.title}
                     className={styles.cardImage}
                   />
-                )}
+                </div>
+              )}
+              <div
+                className={`${styles.cardInfo} ${!event.imageUrl ? styles.cardInfoFull : ""}`}
+              >
                 <span className={styles.date}>{formatDate(event.date)}</span>
                 <h3>{event.title}</h3>
                 <span className={styles.location}>
                   {formatLocation(event.location)}
                 </span>
-                <p>{event.description}</p>
-              </div>
-              <div className={styles.cardRight}>
-                <span className={styles.recapLabel}>Recap</span>
                 <p>{event.status === "past" && event.recap}</p>
               </div>
             </div>

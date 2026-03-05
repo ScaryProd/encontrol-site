@@ -1,3 +1,9 @@
+export type ReleaseDate =
+  | { type: "date"; value: string }
+  | { type: "year"; value: number }
+  | { type: "quarter"; value: string }
+  | { type: "tbd" };
+
 export type TeamLinks = {
   instagram?: string;
   facebook?: string;
@@ -8,12 +14,6 @@ export type TeamLinks = {
   itch?: string;
   steam?: string;
 };
-
-export type ReleaseDate =
-  | { type: "date"; value: string }
-  | { type: "year"; value: number }
-  | { type: "quarter"; value: string }
-  | { type: "tbd" };
 
 export type StoreLinks = {
   steam?: string;
@@ -26,18 +26,20 @@ export type StoreLinks = {
 };
 
 export type Developer = {
-  name: string
-  logoUrl?: string
-  links: TeamLinks
-}
+  slug: string;
+  name: string;
+  logoUrl?: string;
+  bio?: string;
+  links: TeamLinks;
+};
 
 export type Game = {
-  id: number
-  slug: string
-  title: string
-  description: string
-  imageUrl: string
-  developers: Developer[]
-  store: StoreLinks
-  release: ReleaseDate
-}
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  developers: Developer[];
+  store: StoreLinks;
+  release: ReleaseDate;
+};

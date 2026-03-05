@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
+import UpcomingEvents from "../components/UpcomingEvents";
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function Home() {
         </Link>
       </section>
 
+      <UpcomingEvents />
       <section className={styles.section}>
         <h2>¿Quiénes somos?</h2>
         <h3>“Comunidad abierta de desarrolladores de videojuegos”</h3>
@@ -37,7 +39,6 @@ function Home() {
           industria para pertenecer a la comunidad.
         </p>
       </section>
-
       <section className={styles.section}>
         <h2>¿Qué hacemos?</h2>
         <p>

@@ -2,36 +2,128 @@
   padding: 1.5rem 0 4rem 0;
   border-bottom: 2px solid var(--blue-accent);
   margin-bottom: 4rem;
-}
-
-.section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.discord {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--blue-mid);
+  border: 2px solid var(--blue-accent);
+  padding: 3rem;
   margin-bottom: 3rem;
 }
 
-.section h2 {
+.discordText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 55ch;
+}
+
+.discordButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  background-color: #5865f2;
+  color: var(--white);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.discordButton:hover {
+  background-color: #4752c4;
+  text-decoration: none;
+}
+
+.discordButton svg {
+  font-size: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 2px solid var(--blue-mid);
+  padding: 2rem;
+}
+
+.card h2 {
   color: var(--blue-accent);
   border-bottom: 1px solid var(--blue-mid);
   padding-bottom: 0.5rem;
 }
 
-.links {
-  list-style: none;
+.socialLinks {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.links a {
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   font-family: var(--font-pixel);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--white);
+  text-decoration: none;
   transition: color 0.2s;
 }
 
-.links a:hover {
+.socialLink svg {
+  font-size: 1.25rem;
+  color: var(--blue-accent);
+}
+
+.socialLink:hover {
   color: var(--blue-accent);
   text-decoration: none;
+}
+
+.emailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.emailLink svg {
+  font-size: 1.25rem;
+  color: var(--blue-accent);
+}
+
+.emailLink:hover {
+  color: var(--blue-accent);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .discord {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

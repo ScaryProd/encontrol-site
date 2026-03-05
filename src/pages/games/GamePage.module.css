@@ -1,0 +1,175 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+  border: 2px solid var(--blue-accent);
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.teamLogo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.heroInfo h1 {
+  font-size: 2rem;
+}
+
+.release {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  color: var(--blue-accent);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--blue-mid);
+}
+
+.section h3 {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.teamRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.teamLogo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.teamName {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--white);
+}
+
+.devRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.related {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--blue-accent);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.related h2 {
+  font-size: 1.25rem;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+}
+
+.relatedCard:hover {
+  color: var(--blue-accent);
+  text-decoration: none;
+}
+
+.relatedImage {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 2px solid var(--blue-mid);
+  transition: border-color 0.2s;
+}
+
+.relatedCard:hover .relatedImage {
+  border-color: var(--blue-accent);
+}
+
+.devLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.devLink:hover {
+  color: var(--blue-accent);
+}

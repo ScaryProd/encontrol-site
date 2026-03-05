@@ -1,0 +1,160 @@
+.intro {
+  padding: 1.5rem 0 4rem 0;
+  border-bottom: 2px solid var(--blue-accent);
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--blue-accent);
+  padding: 2rem;
+  gap: 1rem;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--white);
+}
+
+.card.reverse {
+  direction: ltr;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+}
+
+.logo {
+  max-height: 120px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.logoPlaceholder {
+  width: 80px;
+  height: 80px;
+  background-color: var(--blue-mid);
+  border: 2px solid var(--blue-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-pixel);
+  font-size: 2rem;
+  color: var(--blue-accent);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nameLink h3 {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .info {
+    padding: 0;
+  }
+}
+
+.gameList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gameChip {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--blue-accent);
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.gameChip:hover {
+  background-color: var(--blue-accent);
+  text-decoration: none;
+}
+
+.pageLink {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--white);
+  background-color: var(--blue-accent);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+}
+
+.pageLink:hover {
+  background-color: var(--blue-mid);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .card.reverse {
+    direction: ltr;
+  }
+
+  .info {
+    padding: 1.5rem;
+  }
+
+  .logoWrap {
+    padding: 2rem 1.5rem 0;
+  }
+}
+
+.sorting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+.sorting button {
+  background-color: transparent;
+  border: 2px solid var(--blue-accent);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+
+.sorting button:hover {
+  background-color: var(--blue-mid);
+}
+
+.sorting button.active {
+  background-color: var(--blue-accent);
+}

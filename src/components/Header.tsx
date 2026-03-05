@@ -33,6 +33,9 @@ function Header() {
         >
           Eventos
         </Link>
+        <Link className={styles.link} to="/developers">
+          Devs
+        </Link>
         <Link
           className={styles.link}
           to="/games"

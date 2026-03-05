@@ -7,49 +7,12 @@
   gap: 1rem;
 }
 
-.upcoming {
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.upcoming h2,
 .pastSection h2 {
   color: var(--blue-accent);
   border-bottom: 1px solid var(--blue-mid);
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
-}
-
-.upcomingGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.upcomingCard {
-  border: 2px solid var(--blue-accent);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.register {
-  font-family: var(--font-pixel);
-  font-size: 0.6rem;
-  color: var(--white);
-  background-color: var(--blue-accent);
-  padding: 0.75rem 1.25rem;
-  text-align: center;
-  margin-top: auto;
-  transition: background-color 0.2s;
-}
-
-.register:hover {
-  background-color: var(--blue-mid);
-  text-decoration: none;
+  margin-top: 2rem;
 }
 
 /* Past events */
@@ -71,9 +34,20 @@
   direction: rtl;
 }
 
-.cardLeft,
-.cardRight {
-  padding: 2rem;
+.imageWrap {
+  overflow: hidden;
+  direction: ltr;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardInfo {
+  padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,13 +55,8 @@
   direction: ltr;
 }
 
-.cardRight {
-  border-left: 2px solid var(--blue-mid);
-}
-
-.card.reverse .cardRight {
-  border-left: none;
-  border-right: 2px solid var(--blue-mid);
+.cardInfoFull {
+  grid-column: span 2;
 }
 
 .date {
@@ -103,22 +72,21 @@
   color: var(--text-muted);
 }
 
-.recapLabel {
-  font-family: var(--font-pixel);
-  font-size: 0.55rem;
-  color: var(--blue-accent);
-  text-transform: uppercase;
-}
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
 
-.upcomingImage {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
+  .card.reverse {
+    direction: ltr;
+  }
 
-.cardImage {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  margin-bottom: 0.5rem;
+  .cardInfoFull {
+    grid-column: span 1;
+  }
+
+  .cardInfo {
+    padding: 1.5rem;
+  }
 }
