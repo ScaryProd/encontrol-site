@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import UpcomingEvents from "../components/UpcomingEvents";
+import { FaDiscord } from "react-icons/fa";
 
 function Home() {
   return (
@@ -20,9 +21,24 @@ function Home() {
           Este sitio es un WIP (Work in Progress), mantente al pendiente de
           nuestras redes sociales y Discord para más información.
         </p>
-        <Link to="https://discord.com/invite/Cad9RaE4s6" className={styles.cta}>
-          Únete
-        </Link>
+        <section className={styles.discord}>
+          <div className={styles.discordText}>
+            <h2>Únete a nuestro Discord</h2>
+            <p>
+              Aqui es donde nos reunimos, organizamos, y platicamos de todos los
+              temas relacionados a videojuegos, y la comunidad.
+            </p>
+          </div>
+          <a
+            href="https://discord.com/invite/Cad9RaE4s6"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.discordButton}
+          >
+            <FaDiscord />
+            Unirse al servidor
+          </a>
+        </section>
       </section>
 
       <UpcomingEvents />

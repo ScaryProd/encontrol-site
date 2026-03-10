@@ -206,4 +206,18 @@ export const events: Event[] = [
     recap: "Juntada de networking!.",
     imageUrl: "/events/Meetup10.jpg",
   },
+  {
+    id: 11,
+    title: "Meetup (011)",
+    description: "Próximamente...",
+    date: "Pronto...",
+    location: {
+      type: "inperson",
+      venue: "TBD",
+      city: "Monterrey, NL",
+    },
+    status: "upcoming",
+    imageUrl: "/events/Meetup07_poster.png",
+    registerUrl: "https://encontrol.dev/",
+  },
 ];
