@@ -4,7 +4,8 @@ export const developers: Developer[] = [
   {
     slug: "Playstorm",
     name: "Playstorm Studios",
-    logoUrl: undefined,
+    logoUrl:
+      "https://avatars.fastly.steamstatic.com/eac40994c080b6a217fca7576dbd5f2434beabd1_full.jpg",
     links: {
       website: "https://encontrol.dev",
     },
@@ -76,6 +77,54 @@ export const developers: Developer[] = [
       bluesky: "https://bsky.app/profile/marcoelz.bsky.social",
     },
   },
+  {
+    slug: "Incisor",
+    name: "Incisor Studios",
+    logoUrl:
+      "https://avatars.fastly.steamstatic.com/82fe62b9a2d7bd7add4a8017e0b2ddce54ed4eda_full.jpg",
+    links: {
+      bluesky: "https://bsky.app/profile/marcoelz.bsky.social",
+      itch: "https://incisor-studios.itch.io/",
+      website: "https://incisorstudios.com/",
+    },
+  },
+  {
+    slug: "Maurimo",
+    name: "Maurimo",
+    logoUrl:
+      "https://cdn.bsky.app/img/avatar/plain/did:plc:m4a24i77j6oxr6b4enanhkyl/bafkreigmws7rp25ss43do2sibxfbwlraq25shxmba2wy6tkm3wgk3xsn34",
+    links: {
+      bluesky: "https://bsky.app/profile/maurimo.dev",
+      itch: "https://maurimo.itch.io/",
+      website: "https://maurimo.dev/",
+    },
+  },
+  {
+    slug: "VFS",
+    name: "VFS",
+    logoUrl:
+      "https://avatars.fastly.steamstatic.com/91a39256e375d9d9b8e1608f3f4e44572d00a808_full.jpg",
+    links: {},
+  },
+  {
+    slug: "Salem",
+    name: "Salem Electrónica",
+    links: {},
+  },
+  {
+    slug: "FelixRaymundo",
+    name: "Felix Raymundo",
+    links: {
+      youtube: "https://www.youtube.com/@mundayongstudio",
+    },
+  },
+  {
+    slug: "RBIE",
+    name: "RBIE",
+    links: {
+      bluesky: "https://bsky.app/profile/ikaexo.bsky.social",
+    },
+  },
 ];
 
 export function getDev(name: string): Developer {
@@ -98,7 +147,18 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3008700",
     },
     release: { type: "year", value: 2026 },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/m1EZgGiLvrM?autoplay=1&mute=1&start=4",
+      duration: 20,
+    },
   },
+  // mp4 example
+  // clip: {
+  //   type: "mp4",
+  //   url: "https://your-cdn.com/clips/eagle-knight.mp4",
+  //   duration: 15,
+  // }
   {
     id: 2,
     slug: "Uppercute",
@@ -112,6 +172,11 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3151660",
     },
     release: { type: "quarter", value: "Q2 2026" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/i0UM-GxTEXw?autoplay=1&mute=1&start=0",
+      duration: 20,
+    },
   },
   {
     id: 3,
@@ -121,12 +186,17 @@ export const games: Game[] = [
       "WHODUNNIT: Hitting Singles is the first episode of a comedic mystery visual novel following a man who must answer a burning question: who the hell did he hook up with last night?",
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3851280/6ba7398a79a075047ace6b5343b627ec436c5a50/library_capsule_2x.jpg?t=1757969797",
-    developers: [getDev("Don Attico")],
+    developers: [getDev("Don Attico"), getDev("Maurimo")],
     store: {
       steam: "https://store.steampowered.com/app/3851280/WHODUNNIT/",
       itch: "https://donattico.itch.io/whodunnit",
     },
     release: { type: "year", value: 2026 },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/u4JOTpOsfhg?autoplay=1&mute=1&start=4",
+      duration: 20,
+    },
   },
   {
     id: 4,
@@ -142,6 +212,11 @@ export const games: Game[] = [
       switch: "https://www.nintendo.com/us/store/products/popslinger-switch/",
     },
     release: { type: "date", value: "2022-04-14" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/60VpYYXtVG0?autoplay=1&mute=1&start=10",
+      duration: 20,
+    },
   },
   {
     id: 5,
@@ -159,6 +234,11 @@ export const games: Game[] = [
         "https://www.nintendo.com/us/store/products/popslinger-vol-2-loveless-switch/",
     },
     release: { type: "date", value: "2024-10-09" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/FmHXIWBuQV0?autoplay=1&mute=1&start=15",
+      duration: 20,
+    },
   },
   {
     id: 6,
@@ -173,6 +253,11 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2376610/Underboard/",
     },
     release: { type: "date", value: "2026-02-06" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/ybNyAk3-o-8?autoplay=1&mute=1&start=4",
+      duration: 20,
+    },
   },
   {
     id: 7,
@@ -202,9 +287,14 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/",
     },
     release: { type: "tbd" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/nGpze0AxYdc?autoplay=1&mute=1&start=0",
+      duration: 30,
+    },
   },
   {
-    id: 8,
+    id: 9,
     slug: "IdleWaters",
     title: "Idle Waters",
     description:
@@ -216,5 +306,105 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/",
     },
     release: { type: "date", value: "2025-12-10" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/Bl6djZa1riE?autoplay=1&mute=1&start=0",
+      duration: 30,
+    },
+  },
+  {
+    id: 10,
+    slug: "FosteringApocalypse",
+    title: "Fostering Apocalypse",
+    description:
+      "The demon summoned to embark the second apocalypse is only a child, and a woman who has lost it all resolves to save her. A half-hour long narrative game with survival gameplay elements and two endings. ",
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/1667490/library_600x900_2x.jpg?t=1623941010",
+    developers: [getDev("Incisor Studios"), getDev("Maurimo")],
+    store: {
+      steam: "https://store.steampowered.com/app/1667490/Fostering_Apocalypse/",
+    },
+    release: { type: "date", value: "2021-07-15" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/JeBe6L4a4lQ?autoplay=1&mute=1&start=15",
+      duration: 30,
+    },
+  },
+  {
+    id: 11,
+    slug: "Incorporeal",
+    title: "Incorporeal",
+    description:
+      "Incorporeal is a dungeon crawler where you play as a treasure hunter who has the ability to sever their soul from their body. Dash through traps, strike foes with your spectral form, and protect your fragile body as you fight, puzzle, and survive the catacombs to claim ancient relics.  ",
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/3977270/51fba81750dd6d9299578d7e813dbd8e4fbd4c90/library_capsule_2x.jpg?t=1757095203",
+    developers: [getDev("VFS")],
+    store: {
+      steam: "https://store.steampowered.com/app/1667490/Fostering_Apocalypse/",
+    },
+    release: { type: "date", value: "2025-09-25" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/tBl4tiTA9Gk?autoplay=1&mute=1&start=10",
+      duration: 30,
+    },
+  },
+  {
+    id: 12,
+    slug: "Merkava",
+    title: "Merkava: The Sacred Armour of Meirav",
+    description:
+      "Save the world from Dinah's threat by defeating angels, demons, beasts, and aliens.",
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/4016530/1345f26aa6c352d26012da5a876051d40b5de1be/library_capsule_2x.jpg?t=1757436922",
+    developers: [getDev("Salem Electrónica")],
+    store: {
+      steam:
+        "https://store.steampowered.com/app/4016530/Merkava_The_Sacred_Armour_of_Meirav/",
+    },
+    release: { type: "date", value: "2025-10-07" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/Y4jTbkh51Es?autoplay=1&mute=1&start=6",
+      duration: 30,
+    },
+  },
+  {
+    id: 13,
+    slug: "VAPOL",
+    title: "V.A.P.O.L",
+    description:
+      "Videojuego indie de terror psicológico desarrollado durante 8 meses, diseñado para incomodar y desafiar al jugador. V.A.P.O.L no ofrece respuestas claras ni caminos seguros. Cada paso te sumerge más en una atmósfera opresiva donde el miedo no se muestra, se siente. El juego no quiere que sigas avanzando.",
+    imageUrl: "https://img.itch.zone/aW1nLzI1OTA0NTEzLnBuZw==/x200/PFR6Ga.png",
+    developers: [getDev("Felix Raymundo")],
+    store: {
+      itch: "https://mundayongstudios.itch.io/vapol-spanish-edition",
+    },
+    release: { type: "date", value: "2025-10-07" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/Em_-2mgbgoI?autoplay=1&mute=1&start=15",
+      duration: 20,
+    },
+  },
+  {
+    id: 14,
+    slug: "IdiotsInTheDAS",
+    title: "Idiots in the DAS",
+    description:
+      "Idiots in the DAS is a 2D platformer combined with a turn-based RPG with a particular sense of humor that mocks internet old and new culture and a battle style that focuses a lot on Hit or Miss and gradual HP loss ",
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/3345590/d93f96d82f57ce508842f1fa243647751ddb825e/library_capsule_2x.jpg?t=1763154105",
+    developers: [getDev("RBIE")],
+    store: {
+      steam: "https://store.steampowered.com/app/3345590/Idiots_in_the_DAS/",
+    },
+    release: { type: "tbd" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/Q6v0aU29f2M?autoplay=1&mute=1&start=15",
+      duration: 30,
+    },
   },
 ];

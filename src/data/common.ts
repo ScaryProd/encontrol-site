@@ -13,6 +13,7 @@ export type TeamLinks = {
   discord?: string;
   itch?: string;
   steam?: string;
+  youtube?: string;
 };
 
 export type StoreLinks = {
@@ -33,12 +34,19 @@ export type Developer = {
   links: TeamLinks;
 };
 
+export type GameClip = {
+  type: "mp4" | "youtube";
+  url: string;
+  duration?: number;
+};
+
 export type Game = {
   id: number;
   slug: string;
   title: string;
   description: string;
   imageUrl: string;
+  clip?: GameClip;
   developers: Developer[];
   store: StoreLinks;
   release: ReleaseDate;

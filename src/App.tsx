@@ -10,6 +10,7 @@ import GamePage from "./pages/games/GamePage";
 import AboutMember from "./pages/AboutMember";
 import Developers from "./pages/developers/Developers";
 import DeveloperPage from "./pages/developers/DeveloperPage";
+import Showreel from "./pages/Showreel";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/developers/:slug" element={<DeveloperPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
+      <Route path="/showreel" element={<Showreel />} />
     </Routes>
   );
 }

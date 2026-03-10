@@ -58,7 +58,6 @@ function GamePage() {
           <h1>{game.title}</h1>
           <p className={styles.release}>{formatRelease(game.release)}</p>
           <p>{game.description}</p>
-
           <div className={styles.section}>
             <h3>
               {game.developers.length > 1 ? "Desarrolladores" : "Desarrollador"}
@@ -79,13 +78,30 @@ function GamePage() {
               </div>
             ))}
           </div>
-
           <div className={styles.section}>
             <h3>Disponible en</h3>
             <StoreIcons store={game.store} />
           </div>
         </div>
       </div>
+
+      {game.clip && (
+        <div className={styles.clip}>
+          {game.clip.type === "mp4" && (
+            <video className={styles.clipVideo} muted controls playsInline>
+              <source src={game.clip.url} type="video/mp4" />
+            </video>
+          )}
+          {game.clip.type === "youtube" && (
+            <iframe
+              className={styles.clipVideo}
+              src={game.clip.url.replace("?autoplay=1&mute=1", "?mute=1")}
+              allow="fullscreen"
+              allowFullScreen
+            />
+          )}
+        </div>
+      )}
 
       {relatedGames.length > 0 && (
         <div className={styles.related}>

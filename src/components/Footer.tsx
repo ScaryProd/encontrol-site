@@ -1,8 +1,13 @@
 import styles from "./Footer.module.css";
 import { FaInstagram, FaDiscord } from "react-icons/fa";
 import { FaBluesky } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Footer() {
+  function setOpen(_arg0: boolean): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <footer className={styles.footer}>
       <div className={styles.social}>
@@ -34,6 +39,13 @@ function Footer() {
       <p className={styles.copyright}>
         © {new Date().getFullYear()} EnControl. Todos los derechos reservados.
       </p>
+      <Link
+        className={styles.link}
+        to="/showreel"
+        onClick={() => setOpen(false)}
+      >
+        Showreel
+      </Link>
     </footer>
   );
 }

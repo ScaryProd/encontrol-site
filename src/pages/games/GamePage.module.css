@@ -173,3 +173,16 @@
 .devLink:hover {
   color: var(--blue-accent);
 }
+
+.clip {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid var(--blue-accent);
+}
+
+.clipVideo {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
