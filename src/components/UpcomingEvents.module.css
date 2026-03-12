@@ -36,6 +36,12 @@
   gap: 1.5rem;
 }
 
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
 .card {
   border: 2px solid var(--blue-accent);
   display: flex;

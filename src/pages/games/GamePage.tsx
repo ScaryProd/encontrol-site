@@ -87,11 +87,6 @@ function GamePage() {
 
       {game.clip && (
         <div className={styles.clip}>
-          {game.clip.type === "mp4" && (
-            <video className={styles.clipVideo} muted controls playsInline>
-              <source src={game.clip.url} type="video/mp4" />
-            </video>
-          )}
           {game.clip.type === "youtube" && (
             <iframe
               className={styles.clipVideo}

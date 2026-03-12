@@ -83,7 +83,6 @@ export const developers: Developer[] = [
     logoUrl:
       "https://avatars.fastly.steamstatic.com/82fe62b9a2d7bd7add4a8017e0b2ddce54ed4eda_full.jpg",
     links: {
-      bluesky: "https://bsky.app/profile/marcoelz.bsky.social",
       itch: "https://incisor-studios.itch.io/",
       website: "https://incisorstudios.com/",
     },
@@ -153,12 +152,6 @@ export const games: Game[] = [
       duration: 20,
     },
   },
-  // mp4 example
-  // clip: {
-  //   type: "mp4",
-  //   url: "https://your-cdn.com/clips/eagle-knight.mp4",
-  //   duration: 15,
-  // }
   {
     id: 2,
     slug: "Uppercute",

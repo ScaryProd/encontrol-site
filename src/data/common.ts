@@ -35,7 +35,7 @@ export type Developer = {
 };
 
 export type GameClip = {
-  type: "mp4" | "youtube";
+  type: "youtube";
   url: string;
   duration?: number;
 };

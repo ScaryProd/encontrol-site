@@ -10,14 +10,13 @@ const clips = games
 function Showreel() {
   const [current, setCurrent] = useState(0);
   const [visible, setVisible] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const game = clips[current];
   const clip = game?.clip;
 
   function advance() {
-    setVisible(false);
+    setVisible(false); //fadeout
     setTimeout(() => {
       setCurrent((prev) => (prev + 1) % clips.length);
     }, 500);
@@ -32,12 +31,6 @@ function Showreel() {
     if (timerRef.current) clearTimeout(timerRef.current);
 
     setVisible(false);
-
-    if (clip.type === "mp4" && videoRef.current) {
-      videoRef.current.load();
-      videoRef.current.currentTime = 10;
-      // visible is set in onCanPlay
-    }
 
     if (clip.type === "youtube") {
       // iframe has no load event, give it a moment
@@ -70,21 +63,6 @@ function Showreel() {
       <div
         className={`${styles.player} ${visible ? styles.visible : styles.hidden}`}
       >
-        {clip?.type === "mp4" && (
-          <video
-            ref={videoRef}
-            className={styles.video}
-            muted
-            playsInline
-            onCanPlay={() => {
-              videoRef.current?.play();
-              handleReady();
-            }}
-          >
-            <source src={clip.url} type="video/mp4" />
-          </video>
-        )}
-
         {clip?.type === "youtube" && (
           <iframe
             className={styles.video}

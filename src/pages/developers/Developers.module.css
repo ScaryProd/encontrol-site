@@ -116,7 +116,19 @@
   text-decoration: none;
 }
 
+.sorting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
 @media (max-width: 768px) {
+  h1 {
+    font-size: 1.5;
+  }
+
   .card {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -133,15 +145,11 @@
   .logoWrap {
     padding: 2rem 1.5rem 0;
   }
-}
 
-.sorting {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-family: var(--font-pixel);
-  font-size: 0.6rem;
-  color: var(--text-muted);
+  .sorting {
+    display: grid;
+    gap: 0.75rem;
+  }
 }
 
 .sorting button {
