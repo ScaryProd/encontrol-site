@@ -427,7 +427,7 @@ export const games: Game[] = [
     release: { type: "date", value: "2025-04-11" },
     clip: {
       type: "youtube",
-      url: "https://www.youtube.com/embed/JizI8Y5mZmM?autoplay=1&mute=1&start=15",
+      url: "https://www.youtube.com/embed/JizI8Y5mZmM?autoplay=1&mute=1&start=0",
       duration: 30,
     },
   },
@@ -466,6 +466,25 @@ export const games: Game[] = [
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/7nNxGzvXA70?autoplay=1&mute=1&start=15",
+      duration: 30,
+    },
+  },
+  {
+    id: 18,
+    slug: "WeirdBunnyBanana",
+    title: "Weird Bunny Banana",
+    description:
+      "An entertaining and super challenging short platformer for the most hardcore players!",
+    imageUrl:
+      "https://picon.ngfiles.com/745000/flash_745318_card.png?f1600906928",
+    developers: [getDev("Pixel Perfect Studios")],
+    store: {
+      itch: "https://ppstudiomty.itch.io/weird-bunny-banana",
+    },
+    release: { type: "date", value: "2020-01-01" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/XMitOZWN86U?autoplay=1&mute=1&start=0",
       duration: 30,
     },
   },
