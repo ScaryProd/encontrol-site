@@ -124,6 +124,18 @@ export const developers: Developer[] = [
       bluesky: "https://bsky.app/profile/ikaexo.bsky.social",
     },
   },
+  {
+    slug: "PaperBoatStudios",
+    name: "Paper Boat Studios",
+    links: {},
+  },
+  {
+    slug: "Carlos_7x",
+    name: "Carlos_7x",
+    links: {
+      itch: "https://carlos-7x.itch.io/",
+    },
+  },
 ];
 
 export function getDev(name: string): Developer {
@@ -397,6 +409,63 @@ export const games: Game[] = [
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Q6v0aU29f2M?autoplay=1&mute=1&start=15",
+      duration: 30,
+    },
+  },
+  {
+    id: 15,
+    slug: "RootOut",
+    title: "Root Out!",
+    description:
+      "PaperBoat Studios presents a roguelike game for PC, where for the player must make their way through a world filled with fog and fungi enemies to reach their goal, while being hindered by them. To clear the path, the player must activate various sunflowers that will dissipate the fog around them to clear their way; however, at the same time, they must protect the area from enemies with the help of plants that will defend and help the player achieve their goal. Get fun with the variety of plants, guns and powerups that you may find in the run. Root your way to victory!",
+    imageUrl:
+      "https://img.itch.zone/aW1nLzIwNjY1OTg0LnBuZw==/original/LOQrQb.png",
+    developers: [getDev("Paper Boat Studios")],
+    store: {
+      itch: "https://vov-artik.itch.io/root-out",
+    },
+    release: { type: "date", value: "2025-04-11" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/JizI8Y5mZmM?autoplay=1&mute=1&start=15",
+      duration: 30,
+    },
+  },
+  {
+    id: 16,
+    slug: "KnightOfIceDX",
+    title: "Knight of Ice DX",
+    description:
+      "Knight of Ice is a metroidvania game. Explore all the map to find the secrets that will lead you to a different destiny. Defeat all the monsters and fight the knights!",
+    imageUrl:
+      "https://img.itch.zone/aW1nLzIwNjY1OTg0LnBuZw==/original/LOQrQb.png",
+    developers: [getDev("Carlos_7x")],
+    store: {
+      itch: "https://carlos-7x.itch.io/knight-of-ice-dx",
+    },
+    release: { type: "date", value: "2023-06-29" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/TFQNXflauUE?autoplay=1&mute=1&start=15",
+      duration: 30,
+    },
+  },
+  {
+    id: 17,
+    slug: "MetalWarHeretic",
+    title: "Metal War Heretic",
+    description:
+      "Metal War Heretic is a fast-paced hack n’ slash mobile game where you play as the last human trapped inside a massive war factory. The killer machines, programmed to wipe out all organic life, see you as a heretic in their metallic world. Armed with steel and fury, you must cut your way through relentless hordes of robots in every sector of the factory. Only by defeating all enemies can you activate the portal to advance to the next level. Fight, dodge, and unleash devastating combos as you push toward the factory’s core to stop the genocide threatening humanity. Do you have what it takes to be the heretic who defies the metal? ",
+    imageUrl:
+      "https://img.itch.zone/aW1hZ2UvMzgyOTIzNS8yMjgzOTM1OS5wbmc=/794x1000/l41ur5.png",
+    developers: [getDev("Paper Boat Studios")],
+    store: {
+      itch: "https://vov-artik.itch.io/metal-war-heretic",
+    },
+    release: { type: "date", value: "2025-08-22" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/7nNxGzvXA70?autoplay=1&mute=1&start=15",
       duration: 30,
     },
   },
