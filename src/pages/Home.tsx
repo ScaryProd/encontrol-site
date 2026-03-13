@@ -12,6 +12,24 @@ function Home() {
           className={styles.logo}
         />
         <h1>Bienvenido a EnControl</h1>
+        <img
+          src="gifs/starbig.png"
+          alt="estrellita jiji"
+          className={styles.star}
+          style={{ top: "190px", left: "75%", height: "20px" }}
+        />
+        <img
+          src="gifs/starbig.png"
+          alt="estrellita jiji"
+          className={styles.star}
+          style={{ top: "120px", left: "20%", height: "60px" }}
+        />
+        <img
+          src="gifs/starbig.png"
+          alt="estrellita jiji"
+          className={styles.star}
+          style={{ top: "280px", left: "22.5%", height: "10px" }}
+        />
         <p>
           La comunidad abierta de desarrollo de videojuegos mas grande de
           Monterrey.

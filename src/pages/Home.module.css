@@ -52,6 +52,18 @@
   padding: 3rem;
   margin-bottom: 3rem;
 }
+
+.star {
+  width: max-content;
+  position: absolute;
+  color: white;
+}
+
+@media (max-width: 1280px) {
+  .star {
+    visibility: hidden;
+  }
+}
 @media (max-width: 768px) {
   .discord {
     display: block;
