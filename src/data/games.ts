@@ -438,7 +438,7 @@ export const games: Game[] = [
     description:
       "Knight of Ice is a metroidvania game. Explore all the map to find the secrets that will lead you to a different destiny. Defeat all the monsters and fight the knights!",
     imageUrl:
-      "https://img.itch.zone/aW1nLzIwNjY1OTg0LnBuZw==/original/LOQrQb.png",
+      "https://img.itch.zone/aW1nLzEyNjIzMTA2LnBuZw==/original/Px%2BbqA.png",
     developers: [getDev("Carlos_7x")],
     store: {
       itch: "https://carlos-7x.itch.io/knight-of-ice-dx",
