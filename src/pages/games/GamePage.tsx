@@ -5,6 +5,7 @@ import styles from "./GamePage.module.css";
 import { FaArrowLeft } from "react-icons/fa";
 import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
+import ReportButton from "../../components/ReportButton";
 
 function formatRelease(release: ReleaseDate): string {
   switch (release.type) {
@@ -82,6 +83,7 @@ function GamePage() {
             <h3>Disponible en</h3>
             <StoreIcons store={game.store} />
           </div>
+          <ReportButton type="game" name={game.title} slug={game.slug} />
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import UpcomingEvents from "../components/UpcomingEvents";
 import { events, type EventLocation } from "../data/events";
 import styles from "./Events.module.css";
@@ -22,9 +23,16 @@ function formatLocation(location: EventLocation): string {
   }
 }
 
-const past = events.filter((e) => e.status === "past");
+const pastEvents = events.filter((e) => e.status === "past");
 
 function Events() {
+  const [order, setOrder] = useState<"asc" | "desc">("asc");
+
+  const past = [...pastEvents].sort((a, b) => {
+    const diff = new Date(a.date).getTime() - new Date(b.date).getTime();
+    return order === "asc" ? diff : -diff;
+  });
+
   return (
     <div>
       <section className={styles.intro}>
@@ -49,6 +57,14 @@ function Events() {
 
       <section className={styles.pastSection}>
         <h2>Eventos Pasados</h2>
+        <button
+          className={styles.sortButton}
+          onClick={() => setOrder(order === "asc" ? "desc" : "asc")}
+        >
+          {order === "asc"
+            ? "Más recientes primero ↑"
+            : "Más antiguos primero ↓"}
+        </button>
         <div className={styles.list}>
           {past.map((event, index) => (
             <div

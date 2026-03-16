@@ -1,0 +1,136 @@
+.wrapper {
+  position: relative;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  background: none;
+  border: 1px solid var(--text-muted);
+  color: var(--text-muted);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.trigger:hover {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modalInner {
+  background-color: var(--blue-dark);
+  border: 2px solid var(--blue-accent);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.modalInner h3 {
+  font-size: 1.1rem;
+}
+
+.modalInner p {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  color: var(--text-muted);
+}
+
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.reason {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  background: none;
+  border: 1px solid var(--blue-accent);
+  color: var(--white);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reason.selected {
+  background-color: var(--blue-accent);
+}
+
+.notes {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background-color: var(--blue-mid);
+  border: 1px solid var(--blue-accent);
+  color: var(--white);
+  padding: 0.75rem;
+  resize: vertical;
+  min-height: 80px;
+  width: 100%;
+}
+
+.notes::placeholder {
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cancel {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  background: none;
+  border: 1px solid var(--text-muted);
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.cancel:hover {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.submit {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  background-color: var(--blue-accent);
+  border: none;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit:not(:disabled):hover {
+  background-color: var(--blue-mid);
+}

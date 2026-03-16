@@ -5,6 +5,7 @@ import styles from "./List.module.css";
 import { Link } from "react-router-dom";
 import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
+import ReportButton from "../../components/ReportButton";
 
 function formatRelease(release: ReleaseDate): string {
   switch (release.type) {
@@ -62,8 +63,10 @@ function List() {
         <h1>Juegos de la Comunidad</h1>
         <p>Una colección de Videojuegos hechos en Nuevo León.</p>
         <p>
-          Para agregar tu proyecto, ponte en contacto con un miembro
-          organizador.
+          Para agregar tu proyecto,{" "}
+          <Link to={`https://forms.gle/Cf8xVBgmKebvaeYs5`}>
+            llena este google forms.
+          </Link>
         </p>
         <div className={styles.sorting}>
           <span>Ordenar por:</span>
@@ -128,6 +131,7 @@ function List() {
               <SocialIcons links={game.developers[0].links} />
               <p>{game.description}</p>
               <StoreIcons store={game.store} />
+              <ReportButton type="game" name={game.title} slug={game.slug} />
             </div>
           </div>
         ))}

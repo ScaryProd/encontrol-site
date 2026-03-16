@@ -3,6 +3,7 @@ import { developers, games } from "../../data/games";
 import styles from "./Developers.module.css";
 import SocialIcons from "../../components/SocialIcons";
 import { useState, useMemo } from "react";
+import ReportButton from "../../components/ReportButton";
 
 type SortMode = "random" | "alpha" | "games";
 
@@ -33,7 +34,13 @@ function Developers() {
     <div>
       <section className={styles.intro}>
         <h1>Desarrolladores</h1>
-        <p>Los estudios e individuos detrás de los juegos de EnControl.</p>
+        <p>Los estudios e individuos detrás de los juegos en Nuevo León.</p>
+        <p>
+          Para agregarte o tu equipo,{" "}
+          <Link to={`https://forms.gle/Cf8xVBgmKebvaeYs5`}>
+            llena este google forms.
+          </Link>
+        </p>
         <div className={styles.sorting}>
           <span>Ordenar por:</span>
           <button
@@ -110,6 +117,7 @@ function Developers() {
                   Ver perfil
                 </Link>
               </div>
+              <ReportButton type="developer" name={dev.name} slug={dev.slug} />
             </div>
           );
         })}

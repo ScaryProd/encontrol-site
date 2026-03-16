@@ -75,10 +75,10 @@ export const events: Event[] = [
       venue: "Campus Tec, Expo Estudios.",
       city: "Monterrey, NL",
     },
-    status: "upcoming",
+    status: "past",
     imageUrl: "/events/Ladweek.jpg",
-    registerUrl:
-      "https://www.eventbrite.com.mx/e/ladweek-2026-tickets-1781911287629",
+    recap:
+      "Participacion en el area de Expo de Studios, haciendo difusion de proyectos locales e invitando a miembros nuevos.",
   },
   {
     id: 5,
@@ -179,7 +179,7 @@ export const events: Event[] = [
     imageUrl: "events/Meetup08_poster.png",
   },
   {
-    id: 10,
+    id: 12,
     title: "Meetup 009",
     description: "Nuestro Noveno meetup!",
     date: "2025-12-02",
@@ -193,7 +193,7 @@ export const events: Event[] = [
     imageUrl: "/events/Meetup09.JPG",
   },
   {
-    id: 10,
+    id: 13,
     title: "Meetup 010",
     description: "Nuestro Decimo meetup!",
     date: "2026-02-21",
@@ -207,7 +207,7 @@ export const events: Event[] = [
     imageUrl: "/events/Meetup10.jpg",
   },
   {
-    id: 11,
+    id: 14,
     title: "Meetup (011)",
     description: "Próximamente...",
     date: "Pronto...",

@@ -5,6 +5,7 @@ import styles from "./DeveloperPage.module.css";
 import { FaInstagram, FaFacebook, FaGlobe, FaArrowLeft } from "react-icons/fa";
 import { FaBluesky, FaXTwitter } from "react-icons/fa6";
 import { SiItchdotio } from "react-icons/si";
+import ReportButton from "../../components/ReportButton";
 
 function DevIcons({ links }: { links: TeamLinks }) {
   return (
@@ -110,6 +111,7 @@ function DeveloperPage() {
           <h1>{dev.name}</h1>
           {dev.bio && <p className={styles.bio}>{dev.bio}</p>}
           <DevIcons links={dev.links} />
+          <ReportButton type="developer" name={dev.name} slug={dev.slug} />
         </div>
       </div>
 

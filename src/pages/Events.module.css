@@ -90,3 +90,25 @@
     padding: 1.5rem;
   }
 }
+
+.pastHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.sortButton {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  background: none;
+  border: 1px solid var(--blue-accent);
+  color: var(--white);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sortButton:hover {
+  background-color: var(--blue-accent);
+}
