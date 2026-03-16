@@ -11,7 +11,7 @@
   background: none;
   border: 1px solid var(--text-muted);
   color: var(--text-muted);
-  padding: 0.4rem 0.75rem;
+  padding: 0.5rem;
   cursor: pointer;
   transition:
     color 0.2s,

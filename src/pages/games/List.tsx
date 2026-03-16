@@ -63,9 +63,9 @@ function List() {
         <h1>Juegos de la Comunidad</h1>
         <p>Una colección de Videojuegos hechos en Nuevo León.</p>
         <p>
-          Para agregar tu proyecto,{" "}
+          Para agregar tu proyecto,
           <Link to={`https://forms.gle/Cf8xVBgmKebvaeYs5`}>
-            llena este google forms.
+            llena este enlace (Link a Google Forms).
           </Link>
         </p>
         <div className={styles.sorting}>

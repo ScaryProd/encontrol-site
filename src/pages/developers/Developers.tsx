@@ -36,9 +36,9 @@ function Developers() {
         <h1>Desarrolladores</h1>
         <p>Los estudios e individuos detrás de los juegos en Nuevo León.</p>
         <p>
-          Para agregarte o tu equipo,{" "}
+          Para agregarte o tu equipo,
           <Link to={`https://forms.gle/Cf8xVBgmKebvaeYs5`}>
-            llena este google forms.
+            llena este enlace (Link a Google Forms).
           </Link>
         </p>
         <div className={styles.sorting}>
@@ -116,8 +116,12 @@ function Developers() {
                 >
                   Ver perfil
                 </Link>
+                <ReportButton
+                  type="developer"
+                  name={dev.name}
+                  slug={dev.slug}
+                />
               </div>
-              <ReportButton type="developer" name={dev.name} slug={dev.slug} />
             </div>
           );
         })}

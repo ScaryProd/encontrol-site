@@ -65,7 +65,6 @@ function ReportButton({ type, name, slug }: Props) {
     <div className={styles.wrapper}>
       <button className={styles.trigger} onClick={() => setOpen(!open)}>
         <FaFlag />
-        Reportar
       </button>
 
       {open && (
