@@ -45,6 +45,7 @@ export type Game = {
   slug: string;
   title: string;
   description: string;
+  steamid?: string;
   imageUrl: string;
   clip?: GameClip;
   developers: Developer[];

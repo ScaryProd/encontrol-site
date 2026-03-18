@@ -252,7 +252,7 @@ export const games: Game[] = [
     description:
       "Tactical team-building roguelike auto-battler with active and passive playstyles. Draft a team as you explore maps full of monsters, build synergies, equip items and cast spells to support your team during battles and help them escape the Underboard. ",
     imageUrl:
-      "https://shared.steamstatic.com/store_item_assets/steam/apps/2376610/library_600x900_2x.jpg?t=1761521805",
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/2376610/1ff8923b5dd303a590f52b8600d184894acc8f11/hero_capsule_2x.jpg?t=1771288428",
     developers: [getDev("Headless")],
     store: {
       steam: "https://store.steampowered.com/app/2376610/Underboard/",

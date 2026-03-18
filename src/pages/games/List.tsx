@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { games } from "../../data/games";
-import { type ReleaseDate } from "../../data/common";
+import { type Game, type ReleaseDate } from "../../data/common";
 import styles from "./List.module.css";
 import { Link } from "react-router-dom";
 import SocialIcons from "../../components/SocialIcons";
@@ -35,6 +35,15 @@ function getReleaseOrder(release: ReleaseDate): number {
     case "tbd":
       return Infinity;
   }
+}
+
+function getSteamImage(game: Game): string {
+  if (game.steamid) {
+    return `https://cdn.akamai.steamstatic.com/steam/apps/${game.steamid}/header.jpg`;
+  } else if (game.imageUrl) {
+    return game.imageUrl;
+  }
+  return "";
 }
 
 type SortMode = "random" | "title" | "release";
@@ -99,7 +108,7 @@ function List() {
           >
             <Link to={`/games/${game.slug}`} className={styles.imageWrap}>
               <img
-                src={game.imageUrl}
+                src={getSteamImage(game)}
                 alt={game.title}
                 className={styles.image}
               />
