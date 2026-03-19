@@ -32,6 +32,7 @@ export type Developer = {
   logoUrl?: string;
   bio?: string;
   links: TeamLinks;
+  circle?: boolean;
 };
 
 export type GameClip = {

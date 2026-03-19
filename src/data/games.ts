@@ -120,6 +120,7 @@ export const developers: Developer[] = [
   {
     slug: "RBIE",
     name: "RBIE",
+    logoUrl: "/devs/RbieLogo.png",
     links: {
       bluesky: "https://bsky.app/profile/ikaexo.bsky.social",
     },

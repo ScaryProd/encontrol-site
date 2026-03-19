@@ -39,7 +39,8 @@ export const events: Event[] = [
   {
     id: 2,
     title: "Cowork",
-    description: "Juntadas para chambear y chismear.",
+    description:
+      "Juntadas virtuales semanales para trabajar, compartir espacios, noticias de la comunidad, y mas.",
     date: "Todos los miercoles 7:00 PM",
     location: {
       type: "online",
@@ -194,20 +195,37 @@ export const events: Event[] = [
   },
   {
     id: 13,
-    title: "Meetup 010",
-    description: "Nuestro Decimo meetup!",
-    date: "2026-02-21",
+    title: "LAGS Game Jam 2026",
+    description:
+      "¡Queremos ser la Game Jam Latinoamericana más grande, este es un evento para que todos en América Latina o con raíces en el continente nos muestren su creatividad y habilidad para hacer juegos únicos! ",
+    date: "2026-03-20",
     location: {
-      type: "inperson",
-      venue: "SPENTA Escuela de Estudios Superiores",
-      city: "Monterrey, NL",
+      type: "online",
+      platform: "Itch.io",
+      url: "https://itch.io/jam/lags-game-jam-2026",
     },
-    status: "past",
-    recap: "Juntada de networking!.",
-    imageUrl: "/events/Meetup10.jpg",
+    status: "upcoming",
+    registerUrl: "https://itch.io/jam/lags-game-jam-2026",
+    imageUrl: "/events/lagslogo.jpg",
   },
   {
-    id: 14,
+    id: 15,
+    title: "Iniciativa LOOT - DROP MARZO",
+    description:
+      "DROP es un espacio bimestral de 4hrs del programa LOOT que buscar darle continuidad a los proyectos de videojuegos fortalecido habilidades diversas.",
+    date: "2026-03-28",
+    location: {
+      type: "inperson",
+      venue: "Innovaction GYM - Tec de Monterrey Campus Monterrey",
+      city: "Monterrey, NL",
+    },
+    status: "upcoming",
+    imageUrl: "/events/dropMarzo2026.png",
+    registerUrl:
+      "https://loot.pixelperfectstudio.mx/event/drop-marzo-innovaction-gym/",
+  },
+  {
+    id: 16,
     title: "Meetup (011)",
     description: "Próximamente...",
     date: "Pronto...",
