@@ -198,7 +198,7 @@ export const events: Event[] = [
     title: "LAGS Game Jam 2026",
     description:
       "¡Queremos ser la Game Jam Latinoamericana más grande, este es un evento para que todos en América Latina o con raíces en el continente nos muestren su creatividad y habilidad para hacer juegos únicos! ",
-    date: "2026-03-20",
+    date: "2026-03-21",
     location: {
       type: "online",
       platform: "Itch.io",
@@ -213,7 +213,7 @@ export const events: Event[] = [
     title: "Iniciativa LOOT - DROP MARZO",
     description:
       "DROP es un espacio bimestral de 4hrs del programa LOOT que buscar darle continuidad a los proyectos de videojuegos fortalecido habilidades diversas.",
-    date: "2026-03-28",
+    date: "2026-03-29",
     location: {
       type: "inperson",
       venue: "Innovaction GYM - Tec de Monterrey Campus Monterrey",
