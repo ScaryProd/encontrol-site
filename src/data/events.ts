@@ -195,21 +195,6 @@ export const events: Event[] = [
   },
   {
     id: 13,
-    title: "LAGS Game Jam 2026",
-    description:
-      "¡Queremos ser la Game Jam Latinoamericana más grande, este es un evento para que todos en América Latina o con raíces en el continente nos muestren su creatividad y habilidad para hacer juegos únicos! ",
-    date: "2026-03-21",
-    location: {
-      type: "online",
-      platform: "Itch.io",
-      url: "https://itch.io/jam/lags-game-jam-2026",
-    },
-    status: "upcoming",
-    registerUrl: "https://itch.io/jam/lags-game-jam-2026",
-    imageUrl: "/events/lagslogo.jpg",
-  },
-  {
-    id: 15,
     title: "Iniciativa LOOT - DROP MARZO",
     description:
       "DROP es un espacio bimestral de 4hrs del programa LOOT que buscar darle continuidad a los proyectos de videojuegos fortalecido habilidades diversas.",
@@ -219,13 +204,13 @@ export const events: Event[] = [
       venue: "Innovaction GYM - Tec de Monterrey Campus Monterrey",
       city: "Monterrey, NL",
     },
-    status: "upcoming",
+    status: "past",
     imageUrl: "/events/dropMarzo2026.png",
-    registerUrl:
-      "https://loot.pixelperfectstudio.mx/event/drop-marzo-innovaction-gym/",
+    recap:
+      "Nuestros amigos de la iniciativa LOOT arrancaron su trayectoria, dando apoyo, seguimiento y liderazgo a desarrolladores y proyectos locales.",
   },
   {
-    id: 16,
+    id: 14,
     title: "Meetup (011)",
     description: "Próximamente...",
     date: "Pronto...",
