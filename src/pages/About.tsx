@@ -8,7 +8,7 @@ function About() {
       <section className={styles.intro}>
         <h1>Nosotros</h1>
 
-        <h1>Donde nace EnControl?</h1>
+        <h1>¿Dónde nace EnControl?</h1>
         <p>
           Nace cuando se hace la pregunta: “¿Cómo está el desarrollo de juegos
           en Nuevo León?” Se trata, entonces, de juntar a los que están

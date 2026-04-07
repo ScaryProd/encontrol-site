@@ -61,7 +61,7 @@ function Home() {
       <UpcomingEvents />
       <section className={styles.section}>
         <h2>¿Quiénes somos?</h2>
-        <h3>“Comunidad abierta de desarrolladores de videojuegos”</h3>
+        <h3>Comunidad abierta de desarrolladores de videojuegos</h3>
         <p>
           Somos una comunidad abierta a todos, no es exclusiva, se invita a
           unirse y participar a todos los interesados, ya sean profesionistas,

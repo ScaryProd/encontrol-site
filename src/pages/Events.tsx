@@ -39,7 +39,7 @@ function Events() {
         <h1>Eventos</h1>
         <p>Juntadas, meetups y más de la comunidad EnControl.</p>
 
-        <h1>Por que asistir a eventos?</h1>
+        <h1>¿Por qué asistir a eventos?</h1>
         <p>
           Puedes ganar exposición para ti, tu projecto/juego/portafolio. Haces
           networking. Encuentras recursos, herramientas, ayuda, feedback e
