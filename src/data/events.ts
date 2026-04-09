@@ -41,7 +41,7 @@ export const events: Event[] = [
     title: "Cowork",
     description:
       "Juntadas virtuales semanales para trabajar, compartir espacios, noticias de la comunidad, y mas.",
-    date: "Todos los miercoles 7:00 PM",
+    date: "Los miercoles 7:00 PM",
     location: {
       type: "online",
       platform: "Discord",
@@ -212,15 +212,16 @@ export const events: Event[] = [
   {
     id: 14,
     title: "Meetup (011)",
-    description: "Próximamente...",
-    date: "Pronto...",
+    description: "🗣️ ÚNETE A FESTEJAR NUESTRO 3ER ANIVERSARIO!",
+    date: "Abril 25 4-8pm",
     location: {
       type: "inperson",
-      venue: "TBD",
+      venue:
+        "Casa de la Cultura de Nuevo León, ubicada en Av. Colón 400 Ote. Centro",
       city: "Monterrey, NL",
     },
     status: "upcoming",
-    imageUrl: "/events/Meetup07_poster.png",
-    registerUrl: "https://encontrol.dev/",
+    imageUrl: "/events/Meetup11_poster.png",
+    registerUrl: "https://forms.gle/7e5fSZU8hkcDNkuM7",
   },
 ];
