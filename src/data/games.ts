@@ -137,6 +137,14 @@ export const developers: Developer[] = [
       itch: "https://carlos-7x.itch.io/",
     },
   },
+  {
+    slug: "Skyque",
+    name: "Skyque",
+    links: {
+      twitter: "https://x.com/Skyque10",
+      youtube: "https://www.youtube.com/@SkyqueDev",
+    },
+  },
 ];
 
 export function getDev(name: string): Developer {
@@ -279,6 +287,11 @@ export const games: Game[] = [
         "https://games.legendsoflearning.com/game/cut-the-rope-om-nom-s-picture-collection/4581?learning_objective_id=985&partner=legends-developer",
     },
     release: { type: "date", value: "2026-02-06" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/-dAcuOdOMio?autoplay=1&mute=1&start=5",
+      duration: 30,
+    },
   },
   {
     id: 8,
@@ -486,6 +499,25 @@ export const games: Game[] = [
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/XMitOZWN86U?autoplay=1&mute=1&start=0",
+      duration: 30,
+    },
+  },
+  {
+    id: 19,
+    slug: "Blooming",
+    title: "Blooming",
+    description:
+      "Blooming is a 2D action platformer where you wield a bow that transforms into dual blades. Explore interconnected areas in any order, defeat powerful bosses, and absorb their abilities to grow stronger.",
+    imageUrl:
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2530280/header.jpg?t=1768543365",
+    developers: [getDev("Skyque")],
+    store: {
+      itch: "https://ppstudiomty.itch.io/weird-bunny-banana",
+    },
+    release: { type: "date", value: "2020-01-01" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/b6Ks4Q2XOjM?autoplay=1&mute=1&start=0",
       duration: 30,
     },
   },
