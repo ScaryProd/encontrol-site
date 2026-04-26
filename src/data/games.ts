@@ -322,7 +322,7 @@ export const games: Game[] = [
       "https://shared.steamstatic.com/store_item_assets/steam/apps/2963540/library_600x900_2x.jpg?t=1754971349",
     developers: [getDev("Ignita Games")],
     store: {
-      steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/",
+      steam: "https://store.steampowered.com/app/2963540/Idle_Waters/",
     },
     release: { type: "date", value: "2025-12-10" },
     clip: {
