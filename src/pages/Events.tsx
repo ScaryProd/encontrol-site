@@ -26,7 +26,7 @@ function formatLocation(location: EventLocation): string {
 const pastEvents = events.filter((e) => e.status === "past");
 
 function Events() {
-  const [order, setOrder] = useState<"asc" | "desc">("asc");
+  const [order, setOrder] = useState<"asc" | "desc">("desc");
 
   const past = [...pastEvents].sort((a, b) => {
     const diff = new Date(a.date).getTime() - new Date(b.date).getTime();
@@ -57,13 +57,12 @@ function Events() {
 
       <section className={styles.pastSection}>
         <h2>Eventos Pasados</h2>
+        <p>Ordenando por:</p>
         <button
           className={styles.sortButton}
           onClick={() => setOrder(order === "asc" ? "desc" : "asc")}
         >
-          {order === "asc"
-            ? "Más recientes primero ↑"
-            : "Más antiguos primero ↓"}
+          {order === "asc" ? "Más antiguos" : "Más recientes"}
         </button>
         <div className={styles.list}>
           {past.map((event, index) => (
