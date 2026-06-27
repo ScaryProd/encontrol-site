@@ -360,7 +360,7 @@ export const games: Game[] = [
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3977270/51fba81750dd6d9299578d7e813dbd8e4fbd4c90/library_capsule_2x.jpg?t=1757095203",
     developers: [getDev("VFS")],
     store: {
-      steam: "https://store.steampowered.com/app/1667490/Fostering_Apocalypse/",
+      steam: "https://store.steampowered.com/app/3977270/Incorporeal/",
     },
     release: { type: "date", value: "2025-09-25" },
     clip: {
@@ -509,15 +509,34 @@ export const games: Game[] = [
     description:
       "Blooming is a 2D action platformer where you wield a bow that transforms into dual blades. Explore interconnected areas in any order, defeat powerful bosses, and absorb their abilities to grow stronger.",
     imageUrl:
-      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2530280/header.jpg?t=1768543365",
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/2530280/library_600x900_2x.jpg?t=1728594135",
     developers: [getDev("Skyque")],
     store: {
-      itch: "https://ppstudiomty.itch.io/weird-bunny-banana",
+      steam: "https://store.steampowered.com/app/2530280/Blooming/",
     },
     release: { type: "date", value: "2020-01-01" },
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/b6Ks4Q2XOjM?autoplay=1&mute=1&start=0",
+      duration: 30,
+    },
+  },
+  {
+    id: 20,
+    slug: "TeaKnights",
+    title: "TeaKnights",
+    description:
+      "TeaKnights is a Y2K-inspired musical rail shooter set across seven tea-powered biodomes. As apprentice Camellia Jetsworth, blast enemies with TeaSetter REGALIAS, build chain combos to drive the dynamic soundtrack, face bosses, aid fellow knights, explore the overworld, and customize your look. ",
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/4863130/06f323498c7ddd7089f2dce4881ed7b38082d33c/library_capsule_2x.jpg?t=1782188645",
+    developers: [getDev("Funky Can Creative")],
+    store: {
+      steam: "https://store.steampowered.com/app/4863130/TeaKnights/",
+    },
+    release: { type: "tbd" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/D-lDLs9DDyo?autoplay=1&mute=1&start=0",
       duration: 30,
     },
   },

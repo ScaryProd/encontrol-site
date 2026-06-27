@@ -213,7 +213,22 @@ export const events: Event[] = [
     id: 14,
     title: "Meetup (011)",
     description: "🗣️ ÚNETE A FESTEJAR NUESTRO 3ER ANIVERSARIO!",
-    date: "Abril 25 4-8pm",
+    date: "2026-04-25",
+    location: {
+      type: "inperson",
+      venue:
+        "Casa de la Cultura de Nuevo León, ubicada en Av. Colón 400 Ote. Centro",
+      city: "Monterrey, NL",
+    },
+    status: "past",
+    imageUrl: "/events/Meetup11_poster.png",
+    recap: "Junta de netowrking. Edicion aniversario!",
+  },
+  {
+    id: 15,
+    title: "Meetup (012)",
+    description: "Ven a una edicion cinematica en la Casa de la Cultura!",
+    date: "Junio 27 4-8pm",
     location: {
       type: "inperson",
       venue:
@@ -221,7 +236,8 @@ export const events: Event[] = [
       city: "Monterrey, NL",
     },
     status: "upcoming",
-    imageUrl: "/events/Meetup11_poster.png",
-    registerUrl: "https://forms.gle/7e5fSZU8hkcDNkuM7",
+    imageUrl: "/events/Meetup12_poster.png",
+    registerUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfULnYaWv0HQrvzvY8RP8pmUvXVYEQyJCLiiPPHBb5d36PzIg/viewform",
   },
 ];

@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 apikey.txt
+dbpassword.txt
+.env

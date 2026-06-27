@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { QRCode } from "react-qr-code";
 import { games } from "../data/games";
 import styles from "./Showreel.module.css";
 
@@ -80,10 +81,13 @@ function Showreel() {
                 {game.developers.map((d) => `@${d.name}`).join(" · ")}
               </span>
             </div>
-            <img
-              src="/encontrol_logo.jpg"
-              alt="EnControl"
-              className={styles.overlayLogo}
+            <QRCode
+              size={128}
+              value={
+                game.store.steam
+                  ? game.store.steam
+                  : `https://encontrol.dev/games/${game.slug}`
+              }
             />
           </Link>
         </div>
