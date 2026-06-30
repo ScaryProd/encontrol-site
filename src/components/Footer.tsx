@@ -10,6 +10,31 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <div className={styles.support}>
+        Con el apoyo de:
+        <a
+          href="https://www.jetbrains.com/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Jetbrains"
+        >
+          <img
+            className={styles.supportImage}
+            src="support\jetbrains-mono-white.svg"
+            alt="JetBrains logo."
+            width={"150px"}
+          ></img>
+          <p className={styles.copyright}>
+            Copyright © 2026 JetBrains s.r.o. JetBrains and the JetBrains logo
+            are trademarks of JetBrains s.r.o.
+          </p>
+        </a>
+      </div>
+
+      <p className={styles.copyright}>
+        © {new Date().getFullYear()} EnControl. Todos los derechos reservados.
+      </p>
+
       <div className={styles.social}>
         <a
           href="https://instagram.com/encontrol.mty"
@@ -36,9 +61,6 @@ function Footer() {
           <FaDiscord />
         </a>
       </div>
-      <p className={styles.copyright}>
-        © {new Date().getFullYear()} EnControl. Todos los derechos reservados.
-      </p>
       <Link
         className={styles.link}
         to="/showreel"
