@@ -235,9 +235,23 @@ export const events: Event[] = [
         "Casa de la Cultura de Nuevo León, ubicada en Av. Colón 400 Ote. Centro",
       city: "Monterrey, NL",
     },
+    status: "past",
+    imageUrl: "/events/Meetup12_poster.png",
+    recap:
+      "Nuestra juntada de networking mas numerosa. De nuevo en Casa de la Cultura!",
+  },
+  {
+    id: 16,
+    title: "EnControl Showcase!",
+    description: "Showcase de juegos de la comunidad! Detalles TBD",
+    date: "TBD",
+    location: {
+      type: "inperson",
+      venue: "TBD",
+      city: "Monterrey, NL",
+    },
     status: "upcoming",
     imageUrl: "/events/Meetup12_poster.png",
-    registerUrl:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfULnYaWv0HQrvzvY8RP8pmUvXVYEQyJCLiiPPHBb5d36PzIg/viewform",
+    registerUrl: "https://discord.com/invite/Cad9RaE4s6",
   },
 ];
