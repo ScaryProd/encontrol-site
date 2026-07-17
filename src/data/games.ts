@@ -167,6 +167,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3008700",
     },
     release: { type: "year", value: 2026 },
+    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/m1EZgGiLvrM?autoplay=1&mute=1&start=4",
@@ -186,6 +187,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3151660",
     },
     release: { type: "quarter", value: "Q2 2026" },
+    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/i0UM-GxTEXw?autoplay=1&mute=1&start=0",
@@ -206,6 +208,7 @@ export const games: Game[] = [
       itch: "https://donattico.itch.io/whodunnit",
     },
     release: { type: "year", value: 2026 },
+    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/u4JOTpOsfhg?autoplay=1&mute=1&start=4",
@@ -226,6 +229,7 @@ export const games: Game[] = [
       switch: "https://www.nintendo.com/us/store/products/popslinger-switch/",
     },
     release: { type: "date", value: "2022-04-14" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/60VpYYXtVG0?autoplay=1&mute=1&start=10",
@@ -248,6 +252,7 @@ export const games: Game[] = [
         "https://www.nintendo.com/us/store/products/popslinger-vol-2-loveless-switch/",
     },
     release: { type: "date", value: "2024-10-09" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/FmHXIWBuQV0?autoplay=1&mute=1&start=15",
@@ -267,6 +272,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2376610/Underboard/",
     },
     release: { type: "date", value: "2026-02-06" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/ybNyAk3-o-8?autoplay=1&mute=1&start=4",
@@ -287,6 +293,7 @@ export const games: Game[] = [
         "https://games.legendsoflearning.com/game/cut-the-rope-om-nom-s-picture-collection/4581?learning_objective_id=985&partner=legends-developer",
     },
     release: { type: "date", value: "2026-02-06" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/-dAcuOdOMio?autoplay=1&mute=1&start=5",
@@ -306,6 +313,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/",
     },
     release: { type: "tbd" },
+    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/nGpze0AxYdc?autoplay=1&mute=1&start=0",
@@ -325,6 +333,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2963540/Idle_Waters/",
     },
     release: { type: "date", value: "2025-12-10" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Bl6djZa1riE?autoplay=1&mute=1&start=0",
@@ -344,6 +353,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/1667490/Fostering_Apocalypse/",
     },
     release: { type: "date", value: "2021-07-15" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/JeBe6L4a4lQ?autoplay=1&mute=1&start=15",
@@ -363,6 +373,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3977270/Incorporeal/",
     },
     release: { type: "date", value: "2025-09-25" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/tBl4tiTA9Gk?autoplay=1&mute=1&start=10",
@@ -383,6 +394,7 @@ export const games: Game[] = [
         "https://store.steampowered.com/app/4016530/Merkava_The_Sacred_Armour_of_Meirav/",
     },
     release: { type: "date", value: "2025-10-07" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Y4jTbkh51Es?autoplay=1&mute=1&start=6",
@@ -401,6 +413,7 @@ export const games: Game[] = [
       itch: "https://mundayongstudios.itch.io/vapol-spanish-edition",
     },
     release: { type: "date", value: "2025-10-07" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Em_-2mgbgoI?autoplay=1&mute=1&start=15",
@@ -420,6 +433,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3345590/Idiots_in_the_DAS/",
     },
     release: { type: "tbd" },
+    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Q6v0aU29f2M?autoplay=1&mute=1&start=15",
@@ -439,6 +453,7 @@ export const games: Game[] = [
       itch: "https://vov-artik.itch.io/root-out",
     },
     release: { type: "date", value: "2025-04-11" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/JizI8Y5mZmM?autoplay=1&mute=1&start=0",
@@ -458,6 +473,7 @@ export const games: Game[] = [
       itch: "https://carlos-7x.itch.io/knight-of-ice-dx",
     },
     release: { type: "date", value: "2023-06-29" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/TFQNXflauUE?autoplay=1&mute=1&start=15",
@@ -477,6 +493,7 @@ export const games: Game[] = [
       itch: "https://vov-artik.itch.io/metal-war-heretic",
     },
     release: { type: "date", value: "2025-08-22" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/7nNxGzvXA70?autoplay=1&mute=1&start=15",
@@ -496,6 +513,7 @@ export const games: Game[] = [
       itch: "https://ppstudiomty.itch.io/weird-bunny-banana",
     },
     release: { type: "date", value: "2020-01-01" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/XMitOZWN86U?autoplay=1&mute=1&start=0",
@@ -515,6 +533,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2530280/Blooming/",
     },
     release: { type: "date", value: "2020-01-01" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/b6Ks4Q2XOjM?autoplay=1&mute=1&start=0",
@@ -534,6 +553,7 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/4863130/TeaKnights/",
     },
     release: { type: "tbd" },
+    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/D-lDLs9DDyo?autoplay=1&mute=1&start=0",

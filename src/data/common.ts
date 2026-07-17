@@ -52,4 +52,5 @@ export type Game = {
   developers: Developer[];
   store: StoreLinks;
   release: ReleaseDate;
+  released: boolean;
 };
