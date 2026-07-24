@@ -60,42 +60,42 @@ function Home() {
           style={{ top: "280px", left: "22.5%", height: "10px" }}
         />
         <p>
-          La comunidad abierta de desarrollo de videojuegos mas grande de
+          La comunidad abierta de desarrollo de videojuegos más grande de
           Monterrey.
         </p>
-        <p>
-          Únete y descubre un mundo de talento, oportunidades, actividades, ¡y
-          más!
-        </p>
+        <p>Participa a traves de los siguientes medios:</p>
         <div className={styles.grid}>
-          <section className={styles.card}>
+          <section className={`${styles.card} ${styles.discordCard}`}>
             <div className={styles.discordText}>
-              <h2>Únete a nuestro Discord</h2>
+              <h2>Únete al Discord</h2>
               <p>
-                Aqui es donde nos reunimos, organizamos, y platicamos de todos
-                los temas relacionados a videojuegos, y la comunidad.
+                Núcleo de reunion, organizacion, y discusion de temas
+                relacionados a videojuegos y la comunidad.
               </p>
             </div>
             <a
               href="https://discord.com/invite/Cad9RaE4s6"
               target="_blank"
               rel="noreferrer"
-              className={styles.discordButton}
+              className={`${styles.cardButton} ${styles.discordButton}`}
             >
               <FaDiscord />
               Unirse al servidor
             </a>
           </section>
-          <section className={styles.card}>
+          <section className={`${styles.card} ${styles.instagramCard}`}>
             <div className={styles.discordText}>
-              <h2>Siguenos en Instagramd</h2>
-              <p>Para toda difusion de eventos, proyectos y mas!</p>
+              <h2>Síguenos en Instagram</h2>
+              <p>
+                Sitio de difusión de comunicados. Danos follow para estar al
+                pendiente de todos los eventos, juntadas, proyectos y más!
+              </p>
             </div>
             <a
               href="https://www.instagram.com/encontrol.mty/"
               target="_blank"
               rel="noreferrer"
-              className={styles.discordButton}
+              className={`${styles.cardButton} ${styles.instagramButton}`}
             >
               <FaInstagram />
               Seguir

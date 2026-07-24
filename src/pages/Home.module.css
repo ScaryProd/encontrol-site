@@ -107,38 +107,38 @@
   max-width: 55ch;
 }
 
-.discordButton {
+.cardButton {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  align-self: center;
   gap: 0.75rem;
+  min-width: 250px;
   font-family: var(--font-pixel);
   font-size: 0.65rem;
-  background-color: #5865f2;
   color: var(--white);
   padding: 1rem 2rem;
   text-decoration: none;
   white-space: nowrap;
-  transition: background-color 0.2s;
+  transition: filter 0.2s;
+}
+
+.cardButton:hover {
+  filter: brightness(0.9);
+  text-decoration: none;
+}
+
+.cardButton svg {
+  font-size: 1.25rem;
+}
+
+.discordButton {
+  background-color: #5865f2;
+  border: 2px solid var(--blue-accent);
 }
 
 .instagramButton {
-  font-family: var(--font-pixel);
-  font-size: 1rem;
-  background-color: #5865f2;
-  color: var(--white);
-  padding: 2rem 2rem;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 0.2s;
-}
-
-.discordButton:hover {
-  background-color: #4752c4;
-  text-decoration: none;
-}
-
-.discordButton svg {
-  font-size: 1.25rem;
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
 }
 
 .grid {
@@ -150,17 +150,32 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1.5rem;
   border: 2px solid var(--blue-mid);
   padding: 2rem;
 }
-.card h2 {
-  color: var(--blue-accent);
-  border-bottom: 1px solid var(--blue-mid);
-  padding-bottom: 0.5rem;
+
+.discordCard {
+  background-image: url(/discord/gradient.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid var(--blue-accent);
+  h2 {
+    color: white;
+    padding-bottom: 0.5rem;
+  }
 }
 
-.socialLinks {
+.instagramCard {
+  background-color: rgb(12, 16, 20);
+  border: 2px solid var(--blue-accent);
+  h2 {
+    color: white;
+    padding-bottom: 0.5rem;
+  }
+}
+.card .socialLinks {
   display: flex;
   flex-direction: column;
   gap: 1rem;
