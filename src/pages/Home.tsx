@@ -1,6 +1,26 @@
 import styles from "./Home.module.css";
 import UpcomingEvents from "../components/UpcomingEvents";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaInstagram } from "react-icons/fa";
+
+const WAVE_WIDTH = 400;
+const WAVE_HEIGHT = 30;
+const WAVE_PERIODS = 2;
+const WAVE_AMPLITUDE = 10;
+
+function buildSineWavePath() {
+  const steps = 400;
+  const points: string[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const x = (WAVE_WIDTH / steps) * i;
+    const y =
+      WAVE_HEIGHT / 2 -
+      WAVE_AMPLITUDE * Math.sin((x / WAVE_WIDTH) * WAVE_PERIODS * Math.PI * 2);
+    points.push(`${x.toFixed(2)},${y.toFixed(2)}`);
+  }
+  return `M${points.join(" L")}`;
+}
+
+const SINE_WAVE_PATH = buildSineWavePath();
 
 function Home() {
   return (
@@ -11,6 +31,15 @@ function Home() {
           alt="EnControl Logo"
           className={styles.logo}
         />
+        <svg
+          className={styles.wave}
+          viewBox={`0 0 ${WAVE_WIDTH} ${WAVE_HEIGHT}`}
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path className={styles.wavePath} d={SINE_WAVE_PATH} />
+        </svg>
+
         <h1>Bienvenido a EnControl</h1>
         <img
           src="gifs/starbig.png"
@@ -35,27 +64,44 @@ function Home() {
           Monterrey.
         </p>
         <p>
-          Este sitio es un WIP (Work in Progress), mantente al pendiente de
-          nuestras redes sociales y Discord para más información.
+          Únete y descubre un mundo de talento, oportunidades, actividades, ¡y
+          más!
         </p>
-        <section className={styles.discord}>
-          <div className={styles.discordText}>
-            <h2>Únete a nuestro Discord</h2>
-            <p>
-              Aqui es donde nos reunimos, organizamos, y platicamos de todos los
-              temas relacionados a videojuegos, y la comunidad.
-            </p>
-          </div>
-          <a
-            href="https://discord.com/invite/Cad9RaE4s6"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.discordButton}
-          >
-            <FaDiscord />
-            Unirse al servidor
-          </a>
-        </section>
+        <div className={styles.grid}>
+          <section className={styles.card}>
+            <div className={styles.discordText}>
+              <h2>Únete a nuestro Discord</h2>
+              <p>
+                Aqui es donde nos reunimos, organizamos, y platicamos de todos
+                los temas relacionados a videojuegos, y la comunidad.
+              </p>
+            </div>
+            <a
+              href="https://discord.com/invite/Cad9RaE4s6"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.discordButton}
+            >
+              <FaDiscord />
+              Unirse al servidor
+            </a>
+          </section>
+          <section className={styles.card}>
+            <div className={styles.discordText}>
+              <h2>Siguenos en Instagramd</h2>
+              <p>Para toda difusion de eventos, proyectos y mas!</p>
+            </div>
+            <a
+              href="https://www.instagram.com/encontrol.mty/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.discordButton}
+            >
+              <FaInstagram />
+              Seguir
+            </a>
+          </section>
+        </div>
       </section>
 
       <UpcomingEvents />
