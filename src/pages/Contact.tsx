@@ -7,26 +7,7 @@ function Contact() {
     <div>
       <section className={styles.intro}>
         <h1>Contacto</h1>
-        <p>Unete a la comunidad! Estamos presentes en los siguientes medios:</p>
-      </section>
-
-      <section className={styles.discord}>
-        <div className={styles.discordText}>
-          <h2>Únete a nuestro Discord</h2>
-          <p>
-            Aqui es donde nos reunimos, organizamos, y platicamos de todos los
-            temas relacionados a videojuegos, y la comunidad.
-          </p>
-        </div>
-        <a
-          href="https://discord.com/invite/Cad9RaE4s6"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.discordButton}
-        >
-          <FaDiscord />
-          Unirse al servidor
-        </a>
+        <p>Entremos en contacto! Estamos presentes en los siguientes medios:</p>
       </section>
 
       <div className={styles.grid}>
@@ -56,13 +37,23 @@ function Contact() {
         </section>
 
         <section className={styles.card}>
-          <h2>Correo electrónico</h2>
+          <h2>Contacto directo</h2>
           <p>
-            Para una comunicacion mas directa, favor de mandarnos un correo.
+            Para una comunicacion mas directa, favor de mandarnos un correo o
+            mensaje en discord.
           </p>
           <a href="mailto:contact@encontrol.dev" className={styles.emailLink}>
             <FaEnvelope />
             <span>contact@encontrol.dev</span>
+          </a>
+          <a
+            href="https://discord.com/invite/Cad9RaE4s6"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.socialLink}
+          >
+            <FaDiscord />
+            Unirse al servidor
           </a>
         </section>
       </div>

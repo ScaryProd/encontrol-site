@@ -1,6 +1,26 @@
 import styles from "./Home.module.css";
 import UpcomingEvents from "../components/UpcomingEvents";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaInstagram } from "react-icons/fa";
+
+const WAVE_WIDTH = 400;
+const WAVE_HEIGHT = 30;
+const WAVE_PERIODS = 2;
+const WAVE_AMPLITUDE = 10;
+
+function buildSineWavePath() {
+  const steps = 400;
+  const points: string[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const x = (WAVE_WIDTH / steps) * i;
+    const y =
+      WAVE_HEIGHT / 2 -
+      WAVE_AMPLITUDE * Math.sin((x / WAVE_WIDTH) * WAVE_PERIODS * Math.PI * 2);
+    points.push(`${x.toFixed(2)},${y.toFixed(2)}`);
+  }
+  return `M${points.join(" L")}`;
+}
+
+const SINE_WAVE_PATH = buildSineWavePath();
 
 function Home() {
   return (
@@ -11,6 +31,15 @@ function Home() {
           alt="EnControl Logo"
           className={styles.logo}
         />
+        <svg
+          className={styles.wave}
+          viewBox={`0 0 ${WAVE_WIDTH} ${WAVE_HEIGHT}`}
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path className={styles.wavePath} d={SINE_WAVE_PATH} />
+        </svg>
+
         <h1>Bienvenido a EnControl</h1>
         <img
           src="gifs/starbig.png"
@@ -31,31 +60,48 @@ function Home() {
           style={{ top: "280px", left: "22.5%", height: "10px" }}
         />
         <p>
-          La comunidad abierta de desarrollo de videojuegos mas grande de
+          La comunidad abierta de desarrollo de videojuegos más grande de
           Monterrey.
         </p>
-        <p>
-          Este sitio es un WIP (Work in Progress), mantente al pendiente de
-          nuestras redes sociales y Discord para más información.
-        </p>
-        <section className={styles.discord}>
-          <div className={styles.discordText}>
-            <h2>Únete a nuestro Discord</h2>
-            <p>
-              Aqui es donde nos reunimos, organizamos, y platicamos de todos los
-              temas relacionados a videojuegos, y la comunidad.
-            </p>
-          </div>
-          <a
-            href="https://discord.com/invite/Cad9RaE4s6"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.discordButton}
-          >
-            <FaDiscord />
-            Unirse al servidor
-          </a>
-        </section>
+        <p>Participa a traves de los siguientes medios:</p>
+        <div className={styles.grid}>
+          <section className={`${styles.card} ${styles.discordCard}`}>
+            <div className={styles.discordText}>
+              <h2>Únete al Discord</h2>
+              <p>
+                Núcleo de reunion, organizacion, y discusion de temas
+                relacionados a videojuegos y la comunidad.
+              </p>
+            </div>
+            <a
+              href="https://discord.com/invite/Cad9RaE4s6"
+              target="_blank"
+              rel="noreferrer"
+              className={`${styles.cardButton} ${styles.discordButton}`}
+            >
+              <FaDiscord />
+              Unirse al servidor
+            </a>
+          </section>
+          <section className={`${styles.card} ${styles.instagramCard}`}>
+            <div className={styles.discordText}>
+              <h2>Síguenos en Instagram</h2>
+              <p>
+                Sitio de difusión de comunicados. Danos follow para estar al
+                pendiente de todos los eventos, juntadas, proyectos y más!
+              </p>
+            </div>
+            <a
+              href="https://www.instagram.com/encontrol.mty/"
+              target="_blank"
+              rel="noreferrer"
+              className={`${styles.cardButton} ${styles.instagramButton}`}
+            >
+              <FaInstagram />
+              Seguir
+            </a>
+          </section>
+        </div>
       </section>
 
       <UpcomingEvents />
